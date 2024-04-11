@@ -1,7 +1,7 @@
 Install Server:
 
 - cd flask-server
-- python -m env .venv
+- python -m venv .venv
 - source .venv/bin/activate
 - pip install -r requirements.txt
 
