@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react'
+import './App.css'
+
 
 function App() {
 
     const [data, setData] = useState([{}])
     useEffect(() => {
-        fetch("/test")
+        fetch("http://localhost:8000/test")
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
@@ -21,17 +23,26 @@ function App() {
     }, []);
     
     return (
-        <div>
-            {(typeof data.test === 'undefined') ? 
-            (
-                <p>Loading...</p>
-            ): 
-            (
-                <p>{data.test}</p>
-            )
-            }
+        
+        <div class="container">
+            <link rel="stylesheet" href="./App.css"></link>
+            <div class="data" id="root">
+                {(typeof data.test === 'undefined') ? 
+                (
+                    <p>Loading...</p>
+                ): 
+                (
+                    <p>{data.test}</p>
+                )
+                }
+            </div>
         </div>
     );
+
+    //when compare button is clicked, request with option field data to backend
+    //display the data in a table
+    
 }
+
 
 export default App;

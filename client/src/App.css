@@ -36,3 +36,119 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.data {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+#compareform {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.data {
+  margin-top: 20px;
+}
+
+p {
+  color: #333;
+}
+
+#driversList {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.driver {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Add space between elements */
+  width: 100%;
+  height: 80px; /* Increase height for more spacing */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.driver img {
+  width: 50px; /* Increase image size */
+  height: 50px; /* Increase image size */
+  margin-right: 20px; /* Increase spacing between image and text */
+  border-radius: 50%;
+}
+
+.driver p {
+  margin: 0;
+  font-size: 16px; /* Increase font size */
+}
+
+.driver button {
+  width: 30%;
+  background-color: #dc3545; /* Red color for delete */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 15px; /* Decrease button padding */
+  cursor: pointer;
+}
+
+.driver button:hover {
+  background-color: #bd2130; /* Darker red on hover */
+}
