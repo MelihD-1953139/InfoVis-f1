@@ -13,7 +13,8 @@ function Racegraph() {
     const apiEndpoints = [
         'http://ergast.com/api/f1/2021/1/results.json',
         'http://ergast.com/api/f1/2021/1/laps.json?limit=2000',
-        'http://ergast.com/api/f1/2021/1/pitstops.json?limit=2000'
+        'http://ergast.com/api/f1/2021/1/pitstops.json?limit=2000',
+        '/2021/1/tires'
     ]
 
     useEffect(() => {
@@ -45,6 +46,9 @@ function Racegraph() {
                                 break;
                             case 2:
                                 processThirdAPIData(response);
+                                break;
+                            case 3:
+                                processFourthAPIData(response);
                                 break;
                             default:
                                 break;
@@ -78,7 +82,8 @@ function Racegraph() {
                 status: driver.status,
                 positions: [parseInt(driver.grid)],
                 pitstops: [],
-                tire: [],
+                compounds: [],
+                stintlength: [],
             };
             driversMap.set(driverId, driverInfo);
         });
@@ -108,16 +113,28 @@ function Racegraph() {
         data.MRData.RaceTable.Races[0].PitStops.forEach((pitstop) => {
             const driverId = pitstop.driverId;
             const pitLap = parseInt(pitstop.lap);
-
-            // Get the driver info from driversMap
             const driverInfo = raceData.get(driverId);
 
             // If driverInfo exists, update its position
             if (driverInfo) {
                 driverInfo.pitstops.push(pitLap); // Add position to positions array
-                raceData.set(driverId, driverInfo); // Update driver info in driversMap
+                //raceData.set(driverId, driverInfo); // Update driver info in driversMap
             }
         });
+    };
+
+    const processFourthAPIData = (data) => {
+        for (const key in data) {
+            if (data.hasOwnProperty(key)) {
+                const driverData = data[key];
+                const driverInfo = raceData.get(key);
+                if (driverInfo) {
+                    driverInfo.compounds = driverData.compound;
+                    driverInfo.stintlength = driverData.stintlength;
+                }
+
+            }
+        }
     };
 
 
