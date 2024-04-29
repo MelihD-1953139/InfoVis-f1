@@ -2,8 +2,8 @@ function compoundSymbol(label, outlineColor) {
     var canvas = document.createElement("canvas");
     var ctx = canvas.getContext("2d");
 
-    var width = 22;
-    var height = 22;
+    var width = 16;
+    var height = 16;
     // Set canvas size
     canvas.width = width;
     canvas.height = height;
@@ -24,11 +24,11 @@ function compoundSymbol(label, outlineColor) {
     ctx.lineWidth = 2;
     ctx.stroke();
 
-    ctx.font = "bold 10px Tahoma";
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(label, width / 2, height / 2);
+    // ctx.font = "bold 10px Tahoma";
+    // ctx.fillStyle = "white";
+    // ctx.textAlign = "center";
+    // ctx.textBaseline = "middle";
+    // ctx.fillText(label, width / 2, height / 2);
 
     return canvas;
 }
