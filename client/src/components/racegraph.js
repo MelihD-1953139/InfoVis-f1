@@ -4,6 +4,8 @@ import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart } from 'react-chartjs-2'
 
 
+import { compoundSymbol, symbolWithLabel } from '../util/symbolsCanvas';
+
 function Racegraph() {
     const [selectedYear, setSelectedYear] = useState(2024);
     const [data, setData] = useState({});
@@ -77,7 +79,7 @@ function Racegraph() {
                 driverId: driver.Driver.driverId,
                 code: driver.Driver.code,
                 name: driver.Driver.givenName + ' ' + driver.Driver.familyName,
-                grid: parseInt(driver.grid),
+                grid: parseInt(driver.grid) !== 0 ? parseInt(driver.grid) : 21,
                 laps: parseInt(driver.laps),
                 finalPosition: parseInt(driver.position),
                 status: driver.status,
@@ -136,72 +138,231 @@ function Racegraph() {
         }
     };
 
+
+    const softCompound = compoundSymbol('S', 'red');
+    const mediumCompound = compoundSymbol('M', 'yellow');
+    const hardCompound = compoundSymbol('H', 'white');
+
+    const driverIdToColorMap = {};
+
+    var mechanicalList = [
+        "Mechanical",
+        "Tyre",
+        "Driver Seat",
+        "Puncture",
+        "Driveshaft",
+        "Radiator",
+        "Suspension",
+        "Brakes",
+        "Differential",
+        "Overheating",
+        "Gearbox",
+        "Transmission",
+        "Clutch",
+        "Hydraulics",
+        "Electrical",
+        "Engine"
+    ];
+
+    const pointStylePerDriver = (driverId) => {
+        const driverData = raceData.get(driverId);
+        const statusDriver = driverData.status;
+        var pointStyleDriver = Array(driverData.positions.length).fill(false);
+
+
+
+
+        function compoundd(compound) {
+            if (compound === 'SOFT') return softCompound;
+            if (compound === 'MEDIUM') return mediumCompound;
+            if (compound === 'HARD') return hardCompound;
+        }
+
+        pointStyleDriver[0] = compoundd(driverData.compounds[0]);
+        const compoundsDriver = driverData.compounds.slice(1, driverData.compounds.length);
+
+
+        function cumulativeSum(list) {
+            let sum = 0;
+            const cumulativeList = list.map((num) => sum += num);
+
+            if (cumulativeList[cumulativeList.length - 1] >= driverData.laps) {
+                cumulativeList.pop();
+            }
+
+            return cumulativeList;
+        }
+        const compoundPitstops = cumulativeSum(driverData.stintlength);
+        const pitStops = driverData.pitstops;
+
+
+
+
+        var c = 0;
+        pitStops.forEach((pitStop, index) => {
+            if (compoundPitstops.includes(pitStop)) {
+                pointStyleDriver[pitStop] = compoundd(compoundsDriver[c]);
+                c++;
+            } else {
+                pointStyleDriver[pitStop] = symbolWithLabel('P', driverIdToColorMap[driverId]);
+            }
+        });
+
+        if (statusDriver !== 'Finished') {
+            if (mechanicalList.includes(statusDriver)) {
+                pointStyleDriver[pointStyleDriver.length - 1] = symbolWithLabel('M', driverIdToColorMap[driverId]);
+            }
+            if (statusDriver === 'Accident' || statusDriver === 'Collision') {
+                pointStyleDriver[pointStyleDriver.length - 1] = symbolWithLabel('X', driverIdToColorMap[driverId]);;
+            }
+            if (statusDriver === 'Disqualified') {
+                pointStyleDriver[pointStyleDriver.length - 1] = symbolWithLabel('D', driverIdToColorMap[driverId]);;
+            }
+            if (statusDriver === 'Retired') {
+                pointStyleDriver[pointStyleDriver.length - 1] = symbolWithLabel('R', driverIdToColorMap[driverId]);
+            }
+        };
+        // console.log(driverId, pointStyleDriver, driverData.status);
+        return pointStyleDriver;
+
+    };
+
     const renderGraph = () => {
-        // Extract driver data
-        const driverIds = Array.from(raceData.keys());
+        const distinctColors = [
+            '#8b008b', "#ff4500", "#ffa500", "#949416", "#8a2be2",
+            "#dc143c", "#556b2f", "#8b4513", "#708090", "#483d8b",
+            "#008000", "#00bfff", "#f08080", "#9acd32", "#0000ff",
+            "#57852c", "#ff00ff", "#dda0dd", "#ff1493", "#1e90ff",
+            "#998e2b", "#2727f5"];
+
+        const driverIds = Array.from(raceData.keys()).sort((a, b) => {
+            return raceData.get(a).grid - raceData.get(b).grid;
+        });
+
         const driverNames = driverIds.map(driverId => raceData.get(driverId).code);
         const driverData = driverIds.map(driverId => raceData.get(driverId).positions);
         const tickLabels = driverIds.map(driverId => raceData.get(driverId).positions);
 
-        console.log(raceData)
-        console.log(driverIds)
+
+        driverIds.forEach((driverId, index) => {
+            driverIdToColorMap[driverId] = distinctColors[index];
+        });
+
         const gridPositions = {}
         raceData.forEach((driver) => {
             gridPositions[driver.grid] = driver.name;
         })
-        console.log(gridPositions[1]);
-        // Find the maximum number of laps completed by any driver
-        const maxLaps = Math.max(...driverData.map(driverPositions => driverPositions.length));
 
-        // Prepare data for Chart.js
+
+        const maxLaps = Math.max(...driverData.map(driverPositions => driverPositions.length));
+        const maxLatestPlace = Math.max(...driverIds.map(driverId => raceData.get(driverId).grid).map(gridPos => gridPos));
+        console.log(maxLatestPlace)
+
         const chartData = {
-            labels: Array.from({ length: maxLaps }, (_, i) => i), // Laps
+            labels: Array.from({ length: maxLaps }, (_, i) => i), // Laps starting from -1
             datasets: driverIds.map((driverId, index) => ({
                 label: driverNames[index],
                 data: driverData[index],
+                pointStyle: pointStylePerDriver(driverId),
                 fill: false,
-                labelColor: `hsl(${(index * 360) / driverIds.length}, 70%, 50%)`,
-                borderColor: `hsl(${(index * 360) / driverIds.length}, 70%, 50%)`, // Different color for each driver
+                borderColor: driverIdToColorMap[driverId],
+                // backgroundColor: 'white',
+                // hoverBackgroundColor: 'yellow',
             })),
         };
 
+        function labelColors() {
+            const colorsDrivers = distinctColors.slice(0, driverIds.length).reverse();
+            var times = maxLatestPlace - driverIds.length
+            for (let i = 0; i < times; i++) {
+                colorsDrivers.unshift('#FFFFFF');
+            }
+
+            colorsDrivers.push('#FFFFFF', '#FFFFFF');
+            return colorsDrivers;
+        }
+
         const chartOptions = {
-            legend: {
-                display: false
+            plugins: {
+                title: {
+                    display: true,
+                    text: '2021 First Grand Prix'
+                },
+                legend: {
+                    display: false,
+                },
             },
+            responsive: true,
+            // maintainAspectRatio: false,
+            // borderWidth: 3,
+            // layout: {
+            //     padding: {
+            //         left: 50, // Adjust as needed
+            //         right: 50, // Adjust as needed
+            //     }
+            // },
             scales: {
                 x: {
+                    type: 'linear',
+                    min: -1,
                     ticks: {
-                        autoSkip: false
+                        callback: function (value, index, values) {
+                            if (value >= 0 && value <= maxLaps) {
+                                return value;
+                            } else {
+                                return '';
+                            }
+                        },
+                        stepSize: 1,
+                        autoSkip: false,
+                        color: 'grey'
+                    },
+                    grid: {
+                        // offset: true,
+                        display: true,
+                        color: 'grey'
+                    },
+                    border: {
+                        display: false,
+                        // dashOffset: 2.0
                     }
                 },
                 y: {
+                    min: -1,
+                    max: maxLatestPlace + 1,
+                    type: 'linear',
                     ticks: {
                         callback: function (value, index, values) {
-                            return gridPositions[value];
+                            if (value >= 1 && value <= maxLatestPlace) {
+                                return gridPositions[value];;
+                            } else {
+                                return '';
+                            }
                         },
+                        color: labelColors(),
                         stepSize: 1,
-                        min: 1,
-                        max: 23,
-                        fontColor: function (tickValue, index) {
-                            // You can define your logic here to determine the color
-                            // Example: If the driver's position is less than or equal to 10, set the color to green; otherwise, set it to yellow
-                            const driverId = driverIds[index];
-                            const gridPosition = raceData.get(driverId).grid;
-                            return gridPosition <= 10 ? 'green' : 'yellow';
-                        },
+                        autoSkip: false,
+                        // backdropPadding: 15,
                     },
                     reverse: true,
                     grid: {
-                        display: false
+                        display: false,
+                        // offset: true
+                    },
+                    border: {
+                        display: false,
+                        color: 'grey'
+                        // dashOffset: 2.0
                     }
                 }
             }
         };
 
 
+
+
         return (
-            <div>
+            <div style={{ backgroundColor: 'black', height: '650px' }}>
                 <h2>Race Positions</h2>
                 <Line data={chartData} options={chartOptions} />
             </div>
@@ -210,6 +371,7 @@ function Racegraph() {
 
     return (
         <div>
+            {/* <img src={tire} alt={"logo"} /> */}
             <label htmlFor="yearSelect">Select a year:</label>
             <select id="yearSelect" value={selectedYear} onChange={handleChange}>
                 {Array.from({ length: 2024 - 1950 + 1 }, (_, index) => 1950 + index).map((year) => (
