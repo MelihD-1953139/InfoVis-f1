@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 
-function SelectRace() {
-    const [year, setYear] = useState(1996);
-    const [circuit, setCircuit] = useState("select circuit");
+function SelectRace({year, setYear, circuit, setCircuit, round, setRound, selectedDrivers, setSelectedDrivers, drivercodes, setDriverCodes}) {
     const [data, setData] = useState([{}]);
-    const [round, setRound] = useState(0);
-    const [selectedDrivers, setSelectedDrivers] = useState([]); 
 
     const years = Array.from({ length: 29 }, (_, index) => 1996 + index);
 
     const fetchData = () => {
-        console.log(round);
         let driverselect = document.getElementById("drivers");
         driverselect.innerHTML = "";
+        let driverslist = document.getElementById("driversList");
+        driverslist.innerHTML = "";
+        selectedDrivers = [];
+        drivercodes = [];
+        setSelectedDrivers([]);
+        setDriverCodes([]);
         fetch("https://ergast.com/api/f1/" + year + "/" + round + "/results.json")
             .then(res => {
                 if (!res.ok) {
@@ -22,12 +23,11 @@ function SelectRace() {
             })
             .then(data => {
                 setData(data);
-                console.log(data);
                 // add a selection to choose a driver from this race
                 for (let i = 0; i < data.MRData.RaceTable.Races[0].Results.length; i++) {
                     let option = document.createElement("option");
                     option.text = data.MRData.RaceTable.Races[0].Results[i].Driver.driverId
-                    option.value = data.MRData.RaceTable.Races[0].Results[i].Driver.driverId
+                    option.value = [data.MRData.RaceTable.Races[0].Results[i].Driver.driverId, data.MRData.RaceTable.Races[0].Results[i].Driver.code];
                     driverselect.add(option);
                 }
             })
@@ -47,8 +47,6 @@ function SelectRace() {
             .then(data => {
                 for (let i = 0; i < data.MRData.RaceTable.Races.length; i++) {
                     if (data.MRData.RaceTable.Races[i].Circuit.circuitId === circuit) {
-                        console.log(data.MRData.RaceTable.Races[i].Circuit.circuitId);
-                        console.log(circuit);
                         setRound(data.MRData.RaceTable.Races[i].round);
                     }
                 }
@@ -66,6 +64,12 @@ function SelectRace() {
         circuitselect.innerHTML = "";
         let driverselect = document.getElementById("drivers");
         driverselect.innerHTML = "";
+        let driverslist = document.getElementById("driversList");
+        driverslist.innerHTML = "";
+        selectedDrivers = [];
+        drivercodes = [];
+        setSelectedDrivers([]);
+        setDriverCodes([]);
 
         fetch("https://ergast.com/api/f1/" + e + "/circuits.json")
             .then(res => {
@@ -94,13 +98,17 @@ function SelectRace() {
         fetchData();
     }
 
-    function addDriver() {
+    function addDriver(add = true) {
         let driverselect = document.getElementById("drivers");
-        let selected = driverselect.options[driverselect.selectedIndex].value;
+        let selected = driverselect.options[driverselect.selectedIndex].value.split(',')[0];
+        let drivercode = driverselect.options[driverselect.selectedIndex].value.split(',')[1];
         if (selectedDrivers.includes(selected)) {
             return;
         }
         selectedDrivers.push(selected);
+        drivercodes.push(drivercode);
+        setSelectedDrivers(selectedDrivers);
+        setDriverCodes(drivercodes);
         let driverslist = document.getElementById("driversList");
         driverslist.innerHTML = "";
         for (let i = 0; i < selectedDrivers.length; i++) {
@@ -116,15 +124,34 @@ function SelectRace() {
             let deletebutton = document.createElement("button");
             deletebutton.innerHTML = "delete";
             // Use a closure to capture the correct value of i
-            deletebutton.onclick = (function(index) {
-                return function() {
-                    selectedDrivers.splice(index, 1);
-                    addDriver();
-                };
+            deletebutton.onclick = (function(i){
+                return function(){
+                    deleteDriver(selectedDrivers[i]);
+                }
             })(i);
             driver.appendChild(deletebutton);
             driverslist.appendChild(driver);
         }
+    }
+
+    function deleteDriver(driver){
+        console.log(driver);
+        for (let i = 0; i < selectedDrivers.length; i++){
+            if (selectedDrivers[i] === driver){
+                selectedDrivers.splice(i, 1);
+                drivercodes.splice(i, 1);
+            }
+        }
+        setSelectedDrivers(selectedDrivers);
+        setDriverCodes(drivercodes);
+
+        let driverslist = document.getElementById("driversList");
+        for (let e of driverslist.children){
+            if(e.children[1].innerHTML === driver){
+                e.remove();
+            }
+        }
+
     }
 
     return (
@@ -148,6 +175,9 @@ function SelectRace() {
                 <button id="addDriver" onClick={addDriver}>add driver</button>
             </div>
             <div id="driversList">
+            </div>
+            <div id="laptimeChart">
+                {/* Display the lap time chart here */}
             </div>
         </div>
     );

@@ -5,25 +5,25 @@ import { Chart } from 'react-chartjs-2'
 
 
 import { compoundSymbol, symbolWithLabel } from '../util/symbolsCanvas';
-
-function Racegraph() {
-    const [selectedYear, setSelectedYear] = useState(2024);
+function Racegraph({year, session, selectedDrivers}) {
+    // const [selectedYear, setSelectedYear] = useState(2024);
     const [data, setData] = useState({});
     const [raceData, setRaceData] = useState(new Map());
     const [loading, setLoading] = useState(true);
 
-    const handleChange = (event) => {
-        setSelectedYear(parseInt(event.target.value));
-    };
+    // const handleChange = (event) => {
+    //     setSelectedYear(parseInt(event.target.value));
+    // };
 
     const apiEndpoints = [
-        'http://ergast.com/api/f1/2021/1/results.json',
-        'http://ergast.com/api/f1/2021/1/laps.json?limit=2000',
-        'http://ergast.com/api/f1/2021/1/pitstops.json?limit=2000',
-        '/2021/1/tires'
+        'http://ergast.com/api/f1/' + year + '/' + session + '/results.json',
+        'http://ergast.com/api/f1/' + year + '/' + session + '/laps.json?limit=2000',
+        'http://ergast.com/api/f1/' + year + '/' + session + '/pitstops.json?limit=2000',
+        '/' + year + '/' + session + '/tires'
     ];
 
     useEffect(() => {
+        console.log("Before API's are done");
         setLoading(true);
         const apiPromises = apiEndpoints.map(async endpoint => {
             try {
@@ -64,62 +64,70 @@ function Racegraph() {
 
                 setLoading(false);
                 console.log("After API's are done");
-                console.log(raceData);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
                 // Handle errors if necessary
             });
-    }, [selectedYear]); // Run effect whenever selectedYear changes
+    }, [selectedDrivers]); // Run effect whenever selectedYear changes
 
     const processFirstAPIData = (data) => {
         data.MRData.RaceTable.Races[0].Results.forEach(driver => {
-            const driverId = driver.Driver.driverId;
-            const driverInfo = {
-                driverId: driver.Driver.driverId,
-                code: driver.Driver.code,
-                name: driver.Driver.givenName + ' ' + driver.Driver.familyName,
-                grid: parseInt(driver.grid) !== 0 ? parseInt(driver.grid) : 21,
-                laps: parseInt(driver.laps),
-                finalPosition: parseInt(driver.position),
-                status: driver.status,
-                positions: parseInt(driver.grid) !== 0 ? [parseInt(driver.grid)] : [21],
-                pitstops: [],
-                compounds: [],
-                stintlength: [],
-            };
-            raceData.set(driverId, driverInfo);
+            if (selectedDrivers.includes(driver.Driver.driverId)){
+                console.log("been here");
+                const driverId = driver.Driver.driverId;
+                const driverInfo = {
+                    driverId: driver.Driver.driverId,
+                    code: driver.Driver.code,
+                    name: driver.Driver.givenName + ' ' + driver.Driver.familyName,
+                    grid: parseInt(driver.grid),
+                    laps: parseInt(driver.laps),
+                    finalPosition: parseInt(driver.position),
+                    status: driver.status,
+                    positions: parseInt(driver.grid) !== 0 ? [parseInt(driver.grid)] : [21],
+                    pitstops: [],
+                    compounds: [],
+                    stintlength: [],
+                };
+                raceData.set(driverId, driverInfo);
+            }
         });
     };
 
     const processSecondAPIData = (data) => {
         data.MRData.RaceTable.Races[0].Laps.forEach((lap) => {
             lap.Timings.forEach((timing) => {
-                const driverId = timing.driverId;
-                const position = parseInt(timing.position);
+                if (selectedDrivers.includes(timing.driverId)){
+                    const driverId = timing.driverId;
+                    const position = parseInt(timing.position);
 
-                // Get the driver info from driversMap
-                const driverInfo = raceData.get(driverId);
+                    // Get the driver info from driversMap
+                    const driverInfo = raceData.get(driverId);
 
-                // If driverInfo exists, update its position
-                if (driverInfo) {
-                    driverInfo.positions.push(position); // Add position to positions array
-                    //raceData.set(driverId, driverInfo); // Update driver info in driversMap
+                    // If driverInfo exists, update its position
+                    if (driverInfo) {
+                        driverInfo.positions.push(position); // Add position to positions array
+                        //raceData.set(driverId, driverInfo); // Update driver info in driversMap
+                    }
                 }
+                
             });
         });
     };
 
     const processThirdAPIData = (data) => {
         data.MRData.RaceTable.Races[0].PitStops.forEach((pitstop) => {
-            const driverId = pitstop.driverId;
-            const pitLap = parseInt(pitstop.lap);
-            const driverInfo = raceData.get(driverId);
+            if (selectedDrivers.includes(pitstop.driverId)){
+            
+                const driverId = pitstop.driverId;
+                const pitLap = parseInt(pitstop.lap);
+                const driverInfo = raceData.get(driverId);
 
-            // If driverInfo exists, update its position
-            if (driverInfo) {
-                driverInfo.pitstops.push(pitLap); // Add position to positions array
-                //raceData.set(driverId, driverInfo); // Update driver info in driversMap
+                // If driverInfo exists, update its position
+                if (driverInfo) {
+                    driverInfo.pitstops.push(pitLap); // Add position to positions array
+                    //raceData.set(driverId, driverInfo); // Update driver info in driversMap
+                }
             }
         });
     };
@@ -250,7 +258,9 @@ function Racegraph() {
 
         const gridPositions = {}
         raceData.forEach((driver) => {
-            gridPositions[driver.grid] = driver.name;
+            if (selectedDrivers.includes(driver.name)){
+                gridPositions[driver.grid] = driver.name;
+            }
         })
 
 
@@ -357,6 +367,7 @@ function Racegraph() {
                 }
             }
         };
+        
 
 
 
@@ -371,20 +382,19 @@ function Racegraph() {
 
     return (
         <div>
-            {/* <img src={tire} alt={"logo"} /> */}
-            <label htmlFor="yearSelect">Select a year:</label>
-            <select id="yearSelect" value={selectedYear} onChange={handleChange}>
+            {/* <label htmlFor="yearSelect">Select a year:</label> */}
+            {/* <select id="yearSelect" value={selectedYear} onChange={handleChange}>
                 {Array.from({ length: 2024 - 1950 + 1 }, (_, index) => 1950 + index).map((year) => (
                     <option key={year} value={year}>
                         {year}
                     </option>
                 ))}
-            </select>
-            {loading ? (
+            </select> */}
+            {/* {loading ? (
                 <p>Loading...</p>
-            ) : (
-                renderGraph()
-            )}
+            ) : ( */}
+                {renderGraph()}
+            {/* )} */}
         </div>
     );
 }

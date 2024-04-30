@@ -1,0 +1,14 @@
+.comparecontainer {
+    width: 100%;
+  display: flex;
+  align-items: space-between;
+  margin-top: 20px;
+}
+
+.comparecontainer > div {
+  padding: 20px;
+}
+
+.graph-container {
+    width: 100%;
+}

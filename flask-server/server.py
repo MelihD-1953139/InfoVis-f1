@@ -1,7 +1,37 @@
-from flask import Flask
+from flask import Flask, jsonify
+from flask import request
+from flask_cors import CORS
+from io import StringIO
+import pandas as pd
 import fastf1
 app = Flask(__name__)
+CORS(app)
 
+
+@app.route('/tyres')
+def tyres():
+    year = request.args.get('year')
+    round_number = request.args.get('round')
+    drivers = request.args.get('drivers')
+
+    drivers = drivers.split(",")
+
+    session = fastf1.get_session(int(year), int(round_number), "R")
+    session.load()
+
+    all_compounds = {}
+
+    for driver in drivers:
+        driverlaps = session.laps.pick_driver(driver)
+        tyre_data = driverlaps.Compound
+        tyre_data = tyre_data.to_dict()
+        # convert to array
+        tyre_data = list(tyre_data.values())
+        all_compounds[driver] = tyre_data
+
+    print(all_compounds)
+
+    return all_compounds
 # Route
 @app.route('/year/<int:year>')
 def test(year):
