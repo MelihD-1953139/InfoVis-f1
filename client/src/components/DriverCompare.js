@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SelectRace from "./SelectRace";
 import LapGraph from "./LapGraph";
 import "./DriverCompare.css"; // Import CSS file for styling
-import LRacegraph from "./LegacyRaceGraph";
+import Racegraph from "./racegraph";
 
 function DriverCompare() {
     
@@ -14,7 +14,6 @@ function DriverCompare() {
 
     return (
         <div className="comparecontainer"> {/* Use className for styling */}
-            <LRacegraph/>
             <SelectRace 
                 year={year}
                 setYear={setYear}
