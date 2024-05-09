@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Bar, Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart } from 'react-chartjs-2'
-
+import zoomPlugin from 'chartjs-plugin-zoom';
 
 import { compoundSymbol, symbolWithLabel } from '../util/symbolsCanvas';
+
+
+ChartJS.register(zoomPlugin);
 function Racegraph({year, session, selectedDrivers}) {
     // const [selectedYear, setSelectedYear] = useState(2024);
     const [data, setData] = useState({});
@@ -147,7 +150,7 @@ function Racegraph({year, session, selectedDrivers}) {
     };
 
 
-    const softCompound = compoundSymbol('S', 'red');
+    const softCompound = compoundSymbol('XS', 'red');
     const mediumCompound = compoundSymbol('M', 'yellow');
     const hardCompound = compoundSymbol('H', 'white');
 
@@ -301,6 +304,43 @@ function Racegraph({year, session, selectedDrivers}) {
                 legend: {
                     display: false,
                 },
+                zoom: {
+                    pan: {
+                        enabled: true,
+                        modifierKey: 'shift',
+                        mode: 'x'
+                    },
+                    zoom: {
+                        mode: 'x',
+                        wheel: {
+                            enabled: true,
+                            speed: 0.07,
+                        },
+
+                        drag: {
+                            enabled: true,
+                            modifierKey: 'alt',
+                            borderWidth: 2,
+                            borderColor: 'white',
+                            backgroundColor: 'rgba(128, 128, 128, 0.35)'
+
+                        },
+                        pinch: {
+                            enabled: true
+                        },
+                    },
+                    limits: {
+                        y: {
+                            min: 'original',
+                            max: 'original',
+                        },
+                        x: {
+                            min: 'original',
+                            max: 'original'
+                        }
+                    },
+                },
+
             },
             responsive: true,
             // maintainAspectRatio: false,
@@ -317,7 +357,7 @@ function Racegraph({year, session, selectedDrivers}) {
                     min: -1,
                     ticks: {
                         callback: function (value, index, values) {
-                            if (value >= 0 && value <= maxLaps) {
+                            if (Number.isInteger(value) && value >= 0 && value <= maxLaps) {
                                 return value;
                             } else {
                                 return '';
@@ -338,7 +378,7 @@ function Racegraph({year, session, selectedDrivers}) {
                     }
                 },
                 y: {
-                    min: -1,
+                    min: 0,
                     max: maxLatestPlace + 1,
                     type: 'linear',
                     ticks: {
@@ -356,12 +396,12 @@ function Racegraph({year, session, selectedDrivers}) {
                     },
                     reverse: true,
                     grid: {
-                        display: false,
+                        display: true,
                         // offset: true
                     },
                     border: {
                         display: false,
-                        color: 'grey'
+                        color: 'white'
                         // dashOffset: 2.0
                     }
                 }
