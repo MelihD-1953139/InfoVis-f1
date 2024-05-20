@@ -1,0 +1,6512 @@
+{
+  "1950": [],
+  "1951": [],
+  "1952": [],
+  "1953": [],
+  "1954": [],
+  "1955": [],
+  "1956": [],
+  "1957": [],
+  "1958": [
+    {
+      "constructorId": "vanwall",
+      "nationality": "British",
+      "position": 1,
+      "points": 48,
+      "wins": 6
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 40,
+      "wins": 2
+    },
+    {
+      "constructorId": "cooper",
+      "nationality": "British",
+      "position": 3,
+      "points": 31,
+      "wins": 2
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 4,
+      "points": 18,
+      "wins": 0
+    },
+    {
+      "constructorId": "maserati",
+      "nationality": "Italian",
+      "position": 5,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 6,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "porsche",
+      "nationality": "German",
+      "position": 7,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "connaught",
+      "nationality": "British",
+      "position": 8,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osca",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1959": [
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 1,
+      "points": 40,
+      "wins": 5
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 32,
+      "wins": 2
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 3,
+      "points": 18,
+      "wins": 1
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 4,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "aston_martin",
+      "nationality": "British",
+      "position": 5,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 6,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "kurtis_kraft",
+      "nationality": "American",
+      "position": 7,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "porsche",
+      "nationality": "German",
+      "position": 8,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "maserati",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-borgward",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-osca",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tec-mec",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "connaught",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "jbw",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "vanwall",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "fry",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1960": [
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 1,
+      "points": 48,
+      "wins": 6
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 2,
+      "points": 34,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 26,
+      "wins": 1
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 4,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 5,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-castellotti",
+      "nationality": "British",
+      "position": 6,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "porsche",
+      "nationality": "German",
+      "position": 7,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "behra-porsche",
+      "nationality": "Italian",
+      "position": 8,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "scarab",
+      "nationality": "American",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "aston_martin",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "maserati",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "jbw",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "vanwall",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1961": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 45,
+      "wins": 5
+    },
+    {
+      "constructorId": "lotus-climax",
+      "nationality": "British",
+      "position": 2,
+      "points": 35,
+      "wins": 3
+    },
+    {
+      "constructorId": "porsche",
+      "nationality": "German",
+      "position": 3,
+      "points": 22,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 4,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 5,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 6,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "gilby",
+      "nationality": "British",
+      "position": 7,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-maserati",
+      "nationality": "British",
+      "position": 8,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "de_tomaso-alfa_romeo",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "emeryson",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "de_tomaso-osca",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "jbw",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "mbm",
+      "nationality": "Swiss",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1962": [
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 1,
+      "points": 42,
+      "wins": 4
+    },
+    {
+      "constructorId": "lotus-climax",
+      "nationality": "British",
+      "position": 2,
+      "points": 36,
+      "wins": 3
+    },
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 3,
+      "points": 29,
+      "wins": 1
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 4,
+      "points": 19,
+      "wins": 0
+    },
+    {
+      "constructorId": "porsche",
+      "nationality": "German",
+      "position": 5,
+      "points": 18,
+      "wins": 1
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 18,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 7,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-brm",
+      "nationality": "British",
+      "position": 8,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "emeryson",
+      "nationality": "British",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "enb",
+      "nationality": "Belgian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lds",
+      "nationality": "South African",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-alfa_romeo",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "gilby",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "de_tomaso-alfa_romeo",
+      "nationality": "Italian",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "de_tomaso-osca",
+      "nationality": "Italian",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tomaso",
+      "nationality": "Italian",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-borgward",
+      "nationality": "British",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1963": [
+    {
+      "constructorId": "lotus-climax",
+      "nationality": "British",
+      "position": 1,
+      "points": 54,
+      "wins": 7
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 2,
+      "points": 36,
+      "wins": 2
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 3,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 26,
+      "wins": 1
+    },
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 5,
+      "points": 25,
+      "wins": 0
+    },
+    {
+      "constructorId": "brp",
+      "nationality": "British",
+      "position": 6,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "porsche",
+      "nationality": "German",
+      "position": 7,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-brm",
+      "nationality": "British",
+      "position": 8,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "stebro",
+      "nationality": "Canadian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "scirocco",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lds",
+      "nationality": "South African",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-ford",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "gilby",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tomaso",
+      "nationality": "Italian",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-borgward",
+      "nationality": "British",
+      "position": 20,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "de_tomaso-ferrari",
+      "nationality": "Italian",
+      "position": 21,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-maserati",
+      "nationality": "British",
+      "position": 22,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1964": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 45,
+      "wins": 3
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 2,
+      "points": 42,
+      "wins": 2
+    },
+    {
+      "constructorId": "lotus-climax",
+      "nationality": "British",
+      "position": 3,
+      "points": 37,
+      "wins": 3
+    },
+    {
+      "constructorId": "brabham-climax",
+      "nationality": "British",
+      "position": 4,
+      "points": 30,
+      "wins": 2
+    },
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 5,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-brm",
+      "nationality": "British",
+      "position": 6,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "brp",
+      "nationality": "British",
+      "position": 7,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-brm",
+      "nationality": "British",
+      "position": 8,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "scirocco",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "derrington",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "porsche",
+      "nationality": "German",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-ford",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1965": [
+    {
+      "constructorId": "lotus-climax",
+      "nationality": "British",
+      "position": 1,
+      "points": 54,
+      "wins": 6
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 2,
+      "points": 45,
+      "wins": 3
+    },
+    {
+      "constructorId": "brabham-climax",
+      "nationality": "British",
+      "position": 3,
+      "points": 27,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 26,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 5,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 6,
+      "points": 11,
+      "wins": 1
+    },
+    {
+      "constructorId": "brabham-brm",
+      "nationality": "British",
+      "position": 7,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-brm",
+      "nationality": "British",
+      "position": 8,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-ford",
+      "nationality": "British",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lds-alfa_romeo",
+      "nationality": "South African",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-ford",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lds-climax",
+      "nationality": "South African",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-ford",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "re",
+      "nationality": "Rhodesian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1966": [
+    {
+      "constructorId": "brabham-repco",
+      "nationality": "British",
+      "position": 1,
+      "points": 42,
+      "wins": 4
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 31,
+      "wins": 2
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 3,
+      "points": 30,
+      "wins": 1
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 4,
+      "points": 22,
+      "wins": 1
+    },
+    {
+      "constructorId": "lotus-brm",
+      "nationality": "British",
+      "position": 5,
+      "points": 13,
+      "wins": 1
+    },
+    {
+      "constructorId": "lotus-climax",
+      "nationality": "British",
+      "position": 6,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "eagle-climax",
+      "nationality": "American",
+      "position": 7,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 8,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren-ford",
+      "nationality": "British",
+      "position": 9,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-climax",
+      "nationality": "British",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-brm",
+      "nationality": "British",
+      "position": 11,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren-seren",
+      "nationality": "British",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-ferrari",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "eagle-weslake",
+      "nationality": "American",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "shannon",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1967": [
+    {
+      "constructorId": "brabham-repco",
+      "nationality": "British",
+      "position": 1,
+      "points": 63,
+      "wins": 4
+    },
+    {
+      "constructorId": "lotus-ford",
+      "nationality": "British",
+      "position": 2,
+      "points": 44,
+      "wins": 4
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 3,
+      "points": 28,
+      "wins": 1
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 4,
+      "points": 20,
+      "wins": 1
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 5,
+      "points": 20,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 6,
+      "points": 17,
+      "wins": 0
+    },
+    {
+      "constructorId": "eagle-weslake",
+      "nationality": "American",
+      "position": 7,
+      "points": 13,
+      "wins": 1
+    },
+    {
+      "constructorId": "lotus-brm",
+      "nationality": "British",
+      "position": 8,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 9,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren-brm",
+      "nationality": "British",
+      "position": 10,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-climax",
+      "nationality": "British",
+      "position": 11,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren-ford",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-ford",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lds-climax",
+      "nationality": "South African",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-climax",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "eagle-climax",
+      "nationality": "American",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "matra",
+      "nationality": "French",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "protos",
+      "nationality": "British",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-ats",
+      "nationality": "British",
+      "position": 20,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1968": [
+    {
+      "constructorId": "lotus-ford",
+      "nationality": "British",
+      "position": 1,
+      "points": 62,
+      "wins": 5
+    },
+    {
+      "constructorId": "mclaren-ford",
+      "nationality": "British",
+      "position": 2,
+      "points": 49,
+      "wins": 3
+    },
+    {
+      "constructorId": "matra-ford",
+      "nationality": "French",
+      "position": 3,
+      "points": 45,
+      "wins": 3
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 32,
+      "wins": 1
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 5,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 6,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-brm",
+      "nationality": "British",
+      "position": 7,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-repco",
+      "nationality": "British",
+      "position": 8,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "matra",
+      "nationality": "French",
+      "position": 9,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren-brm",
+      "nationality": "British",
+      "position": 10,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "eagle-weslake",
+      "nationality": "American",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-climax",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lds",
+      "nationality": "South African",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-climax",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1969": [
+    {
+      "constructorId": "matra-ford",
+      "nationality": "French",
+      "position": 1,
+      "points": 66,
+      "wins": 6
+    },
+    {
+      "constructorId": "brabham-ford",
+      "nationality": "British",
+      "position": 2,
+      "points": 49,
+      "wins": 2
+    },
+    {
+      "constructorId": "lotus-ford",
+      "nationality": "British",
+      "position": 3,
+      "points": 47,
+      "wins": 2
+    },
+    {
+      "constructorId": "mclaren-ford",
+      "nationality": "British",
+      "position": 4,
+      "points": 38,
+      "wins": 1
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 5,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "cooper-maserati",
+      "nationality": "British",
+      "position": 7,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-repco",
+      "nationality": "British",
+      "position": 8,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm-ford",
+      "nationality": "British",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-climax",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1970": [
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 1,
+      "points": 59,
+      "wins": 6
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 52,
+      "wins": 4
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 3,
+      "points": 48,
+      "wins": 1
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 4,
+      "points": 35,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren-ford",
+      "nationality": "British",
+      "position": 5,
+      "points": 35,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 6,
+      "points": 23,
+      "wins": 1
+    },
+    {
+      "constructorId": "matra",
+      "nationality": "French",
+      "position": 7,
+      "points": 23,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 8,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren-alfa_romeo",
+      "nationality": "British",
+      "position": 9,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tomaso",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "bellasi",
+      "nationality": "Swiss",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1971": [
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 1,
+      "points": 73,
+      "wins": 7
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 2,
+      "points": 36,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 33,
+      "wins": 2
+    },
+    {
+      "constructorId": "march-ford",
+      "nationality": "British",
+      "position": 4,
+      "points": 33,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-ford",
+      "nationality": "British",
+      "position": 5,
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 6,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "matra",
+      "nationality": "French",
+      "position": 7,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 8,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 9,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus-pw",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "march-alfa_romeo",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "bellasi",
+      "nationality": "Swiss",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1972": [
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 1,
+      "points": 61,
+      "wins": 5
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 2,
+      "points": 51,
+      "wins": 4
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 47,
+      "wins": 1
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 33,
+      "wins": 1
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 5,
+      "points": 18,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 6,
+      "points": 15,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 7,
+      "points": 14,
+      "wins": 1
+    },
+    {
+      "constructorId": "matra",
+      "nationality": "French",
+      "position": 8,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 9,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "tecno",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "connew",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "politoys",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1973": [
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 1,
+      "points": 92,
+      "wins": 7
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 2,
+      "points": 82,
+      "wins": 5
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 58,
+      "wins": 3
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 4,
+      "points": 22,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 5,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 7,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "shadow",
+      "nationality": "British",
+      "position": 8,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 9,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "iso_marlboro",
+      "nationality": "British",
+      "position": 10,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "tecno",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1974": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 73,
+      "wins": 4
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 65,
+      "wins": 3
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 3,
+      "points": 52,
+      "wins": 2
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 4,
+      "points": 42,
+      "wins": 3
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 5,
+      "points": 35,
+      "wins": 3
+    },
+    {
+      "constructorId": "hesketh",
+      "nationality": "British",
+      "position": 6,
+      "points": 15,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 7,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "shadow",
+      "nationality": "British",
+      "position": 8,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 9,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "iso_marlboro",
+      "nationality": "British",
+      "position": 10,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 11,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "parnelli",
+      "nationality": "American",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "trojan",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "penske",
+      "nationality": "American",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "token",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "amon",
+      "nationality": "New Zealander",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lyncar",
+      "nationality": "British",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "maki",
+      "nationality": "Japanese",
+      "position": 20,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1975": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 72.5,
+      "wins": 6
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 2,
+      "points": 54,
+      "wins": 2
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 53,
+      "wins": 3
+    },
+    {
+      "constructorId": "hesketh",
+      "nationality": "British",
+      "position": 4,
+      "points": 33,
+      "wins": 1
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 5,
+      "points": 25,
+      "wins": 1
+    },
+    {
+      "constructorId": "shadow-ford",
+      "nationality": "British",
+      "position": 6,
+      "points": 9.5,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 7,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 8,
+      "points": 7.5,
+      "wins": 1
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 9,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "parnelli",
+      "nationality": "American",
+      "position": 10,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "hill",
+      "nationality": "British",
+      "position": 11,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "penske",
+      "nationality": "American",
+      "position": 12,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lyncar",
+      "nationality": "British",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "shadow-matra",
+      "nationality": "British",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "maki",
+      "nationality": "Japanese",
+      "position": 20,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1976": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 83,
+      "wins": 6
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 74,
+      "wins": 6
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 3,
+      "points": 71,
+      "wins": 1
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 4,
+      "points": 29,
+      "wins": 1
+    },
+    {
+      "constructorId": "penske",
+      "nationality": "American",
+      "position": 5,
+      "points": 20,
+      "wins": 1
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 6,
+      "points": 20,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 7,
+      "points": 19,
+      "wins": 1
+    },
+    {
+      "constructorId": "shadow",
+      "nationality": "British",
+      "position": 8,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-alfa_romeo",
+      "nationality": "British",
+      "position": 9,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 10,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 11,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 12,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "parnelli",
+      "nationality": "American",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "hesketh",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "wolf",
+      "nationality": "Canadian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "boro",
+      "nationality": "Dutch",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "kojima",
+      "nationality": "Japanese",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-ford",
+      "nationality": "British",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 20,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "maki",
+      "nationality": "Japanese",
+      "position": 21,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1977": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 95,
+      "wins": 4
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 2,
+      "points": 62,
+      "wins": 5
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 60,
+      "wins": 3
+    },
+    {
+      "constructorId": "wolf",
+      "nationality": "Canadian",
+      "position": 4,
+      "points": 55,
+      "wins": 3
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 5,
+      "points": 27,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 6,
+      "points": 27,
+      "wins": 0
+    },
+    {
+      "constructorId": "shadow",
+      "nationality": "British",
+      "position": 7,
+      "points": 23,
+      "wins": 1
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 8,
+      "points": 18,
+      "wins": 1
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 9,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 10,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 11,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "penske",
+      "nationality": "American",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "hesketh",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "kojima",
+      "nationality": "Japanese",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lec",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brm",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "boro",
+      "nationality": "Dutch",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "apollon",
+      "nationality": "Swiss",
+      "position": 20,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "mcguire",
+      "nationality": "Australian",
+      "position": 21,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1978": [
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 1,
+      "points": 86,
+      "wins": 8
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 58,
+      "wins": 5
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 3,
+      "points": 53,
+      "wins": 2
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 4,
+      "points": 38,
+      "wins": 1
+    },
+    {
+      "constructorId": "wolf",
+      "nationality": "Canadian",
+      "position": 5,
+      "points": 24,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 6,
+      "points": 19,
+      "wins": 0
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 7,
+      "points": 17,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 8,
+      "points": 15,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 9,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 10,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "shadow",
+      "nationality": "British",
+      "position": 11,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 12,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "surtees",
+      "nationality": "British",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 14,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "martini",
+      "nationality": "French",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "merzario",
+      "nationality": "Italian",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "theodore",
+      "nationality": "Hong Kong",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "hesketh",
+      "nationality": "British",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1979": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 113,
+      "wins": 6
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 2,
+      "points": 75,
+      "wins": 5
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 3,
+      "points": 61,
+      "wins": 3
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 4,
+      "points": 39,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 5,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 6,
+      "points": 26,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 7,
+      "points": 15,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-alfa_romeo",
+      "nationality": "British",
+      "position": 8,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 9,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "shadow",
+      "nationality": "British",
+      "position": 10,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham-ford",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "wolf",
+      "nationality": "Canadian",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "rebaque",
+      "nationality": "Mexican",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "merzario",
+      "nationality": "Italian",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "kauhsen",
+      "nationality": "German",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1980": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 120,
+      "wins": 6
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 2,
+      "points": 66,
+      "wins": 2
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 3,
+      "points": 55,
+      "wins": 3
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 4,
+      "points": 38,
+      "wins": 3
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 5,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 6,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 7,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 8,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 9,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 11,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "shadow",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1981": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 95,
+      "wins": 4
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 2,
+      "points": 61,
+      "wins": 3
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 3,
+      "points": 54,
+      "wins": 3
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 4,
+      "points": 44,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 5,
+      "points": 34,
+      "wins": 2
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 6,
+      "points": 28,
+      "wins": 1
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 7,
+      "points": 22,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 8,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 9,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 10,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 11,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "theodore",
+      "nationality": "Hong Kong",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "toleman",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1982": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 74,
+      "wins": 3
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 69,
+      "wins": 4
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 3,
+      "points": 62,
+      "wins": 4
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 4,
+      "points": 58,
+      "wins": 1
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 5,
+      "points": 41,
+      "wins": 2
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 6,
+      "points": 30,
+      "wins": 1
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 7,
+      "points": 25,
+      "wins": 1
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 8,
+      "points": 20,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 9,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 10,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "fittipaldi",
+      "nationality": "Brazilian",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ensign",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "toleman",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "theodore",
+      "nationality": "Hong Kong",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1983": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 89,
+      "wins": 4
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 2,
+      "points": 79,
+      "wins": 4
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 3,
+      "points": 72,
+      "wins": 4
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 4,
+      "points": 38,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 5,
+      "points": 34,
+      "wins": 1
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 6,
+      "points": 18,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 7,
+      "points": 12,
+      "wins": 1
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 8,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "toleman",
+      "nationality": "British",
+      "position": 9,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 10,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "theodore",
+      "nationality": "Hong Kong",
+      "position": 11,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "spirit",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ram",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1984": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 143.5,
+      "wins": 12
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 57.5,
+      "wins": 1
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 3,
+      "points": 47,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 4,
+      "points": 38,
+      "wins": 2
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 5,
+      "points": 34,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 6,
+      "points": 25.5,
+      "wins": 1
+    },
+    {
+      "constructorId": "toleman",
+      "nationality": "British",
+      "position": 7,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 9,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 10,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "ats",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "spirit",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ram",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1985": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 90,
+      "wins": 6
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 82,
+      "wins": 2
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 3,
+      "points": 71,
+      "wins": 4
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 4,
+      "points": 71,
+      "wins": 3
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 5,
+      "points": 26,
+      "wins": 1
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 6,
+      "points": 23,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 7,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 8,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 9,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ram",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "zakspeed",
+      "nationality": "German",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "toleman",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "spirit",
+      "nationality": "British",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1986": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 141,
+      "wins": 9
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 96,
+      "wins": 4
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 3,
+      "points": 58,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 37,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 5,
+      "points": 29,
+      "wins": 0
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 19,
+      "wins": 1
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 7,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 8,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 9,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "zakspeed",
+      "nationality": "German",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ags",
+      "nationality": "French",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1987": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 137,
+      "wins": 9
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 76,
+      "wins": 3
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 3,
+      "points": 64,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 53,
+      "wins": 2
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 5,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 6,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 7,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 8,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 9,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "zakspeed",
+      "nationality": "German",
+      "position": 10,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 11,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "ags",
+      "nationality": "French",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "coloni",
+      "nationality": "Italian",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1988": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 199,
+      "wins": 15
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 65,
+      "wins": 1
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 39,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 4,
+      "points": 23,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 5,
+      "points": 23,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 6,
+      "points": 22,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 7,
+      "points": 20,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 8,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "rial",
+      "nationality": "German",
+      "position": 9,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "dallara",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ags",
+      "nationality": "French",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "coloni",
+      "nationality": "Italian",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "eurobrun",
+      "nationality": "Italian",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "zakspeed",
+      "nationality": "German",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1989": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 141,
+      "wins": 10
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 2,
+      "points": 77,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 59,
+      "wins": 3
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 39,
+      "wins": 1
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 5,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 6,
+      "points": 15,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 7,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "dallara",
+      "nationality": "Italian",
+      "position": 8,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 9,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "onyx",
+      "nationality": "British",
+      "position": 10,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 12,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "rial",
+      "nationality": "German",
+      "position": 13,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 14,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "ags",
+      "nationality": "French",
+      "position": 15,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 16,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "coloni",
+      "nationality": "Italian",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "zakspeed",
+      "nationality": "German",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "eurobrun",
+      "nationality": "Italian",
+      "position": 20,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1990": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 121,
+      "wins": 6
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 110,
+      "wins": 6
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 71,
+      "wins": 2
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 4,
+      "points": 57,
+      "wins": 2
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 5,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 6,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "leyton",
+      "nationality": "British",
+      "position": 7,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 8,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 9,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 10,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "onyx",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ags",
+      "nationality": "French",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "dallara",
+      "nationality": "Italian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "osella",
+      "nationality": "Italian",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "eurobrun",
+      "nationality": "Italian",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "coloni",
+      "nationality": "Italian",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "life",
+      "nationality": "Italian",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1991": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 139,
+      "wins": 8
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 2,
+      "points": 125,
+      "wins": 7
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 55.5,
+      "wins": 0
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 38.5,
+      "wins": 1
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 5,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 6,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "dallara",
+      "nationality": "Italian",
+      "position": 8,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 9,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 10,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "leyton",
+      "nationality": "British",
+      "position": 11,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lambo",
+      "nationality": "Italian",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "ags",
+      "nationality": "French",
+      "position": 16,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "fondmetal",
+      "nationality": "Italian",
+      "position": 17,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "footwork",
+      "nationality": "British",
+      "position": 18,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "coloni",
+      "nationality": "Italian",
+      "position": 19,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1992": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 164,
+      "wins": 10
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 99,
+      "wins": 5
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 91,
+      "wins": 1
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 5,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 6,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "footwork",
+      "nationality": "British",
+      "position": 7,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 8,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "march",
+      "nationality": "British",
+      "position": 9,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "dallara",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 11,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 12,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 13,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "fondmetal",
+      "nationality": "Italian",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "brabham",
+      "nationality": "British",
+      "position": 15,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1993": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 168,
+      "wins": 10
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 84,
+      "wins": 5
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 72,
+      "wins": 1
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 5,
+      "points": 23,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 6,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 7,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 8,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "footwork",
+      "nationality": "British",
+      "position": 9,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 10,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 11,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1994": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 118,
+      "wins": 7
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 103,
+      "wins": 8
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 71,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 4,
+      "points": 42,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 5,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 6,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 7,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "footwork",
+      "nationality": "British",
+      "position": 9,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "larrousse",
+      "nationality": "French",
+      "position": 11,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "team_lotus",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "simtek",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "pacific",
+      "nationality": "British",
+      "position": 14,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1995": [
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 147,
+      "wins": 11
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 2,
+      "points": 118,
+      "wins": 5
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 73,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 4,
+      "points": 30,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 5,
+      "points": 24,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 6,
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 7,
+      "points": 18,
+      "wins": 0
+    },
+    {
+      "constructorId": "footwork",
+      "nationality": "British",
+      "position": 8,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 9,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "forti",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "pacific",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "simtek",
+      "nationality": "British",
+      "position": 13,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1996": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 175,
+      "wins": 12
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 70,
+      "wins": 3
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 68,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 4,
+      "points": 49,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 5,
+      "points": 22,
+      "wins": 0
+    },
+    {
+      "constructorId": "ligier",
+      "nationality": "French",
+      "position": 6,
+      "points": 15,
+      "wins": 1
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 7,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 8,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "footwork",
+      "nationality": "British",
+      "position": 9,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "forti",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1997": [
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 1,
+      "points": 123,
+      "wins": 8
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 102,
+      "wins": 5
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 67,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 4,
+      "points": 63,
+      "wins": 3
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 5,
+      "points": 33,
+      "wins": 0
+    },
+    {
+      "constructorId": "prost",
+      "nationality": "French",
+      "position": 6,
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 7,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 8,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "stewart",
+      "nationality": "British",
+      "position": 9,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 10,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "lola",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1998": [
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 1,
+      "points": 156,
+      "wins": 9
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 133,
+      "wins": 6
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 3,
+      "points": 38,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 4,
+      "points": 34,
+      "wins": 1
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 5,
+      "points": 33,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 6,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 7,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "stewart",
+      "nationality": "British",
+      "position": 8,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "prost",
+      "nationality": "French",
+      "position": 9,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "tyrrell",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "1999": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 128,
+      "wins": 6
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 124,
+      "wins": 7
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 3,
+      "points": 61,
+      "wins": 2
+    },
+    {
+      "constructorId": "stewart",
+      "nationality": "British",
+      "position": 4,
+      "points": 36,
+      "wins": 1
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 5,
+      "points": 35,
+      "wins": 0
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "prost",
+      "nationality": "French",
+      "position": 7,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 9,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "bar",
+      "nationality": "British",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2000": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 170,
+      "wins": 10
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 162,
+      "wins": 7
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 3,
+      "points": 36,
+      "wins": 0
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 20,
+      "wins": 0
+    },
+    {
+      "constructorId": "bar",
+      "nationality": "British",
+      "position": 5,
+      "points": 20,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 6,
+      "points": 17,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 7,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "jaguar",
+      "nationality": "British",
+      "position": 9,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "prost",
+      "nationality": "French",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2001": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 179,
+      "wins": 9
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 102,
+      "wins": 4
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 3,
+      "points": 80,
+      "wins": 4
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 4,
+      "points": 21,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 5,
+      "points": 19,
+      "wins": 0
+    },
+    {
+      "constructorId": "bar",
+      "nationality": "British",
+      "position": 6,
+      "points": 17,
+      "wins": 0
+    },
+    {
+      "constructorId": "benetton",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "jaguar",
+      "nationality": "British",
+      "position": 8,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "prost",
+      "nationality": "French",
+      "position": 9,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2002": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 221,
+      "wins": 15
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 2,
+      "points": 92,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 65,
+      "wins": 1
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 4,
+      "points": 23,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 5,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 6,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "jaguar",
+      "nationality": "British",
+      "position": 7,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "bar",
+      "nationality": "British",
+      "position": 8,
+      "points": 7,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 10,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "arrows",
+      "nationality": "British",
+      "position": 11,
+      "points": 2,
+      "wins": 0
+    }
+  ],
+  "2003": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 158,
+      "wins": 8
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 2,
+      "points": 144,
+      "wins": 4
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 142,
+      "wins": 2
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 4,
+      "points": 88,
+      "wins": 1
+    },
+    {
+      "constructorId": "bar",
+      "nationality": "British",
+      "position": 5,
+      "points": 26,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 6,
+      "points": 19,
+      "wins": 0
+    },
+    {
+      "constructorId": "jaguar",
+      "nationality": "British",
+      "position": 7,
+      "points": 18,
+      "wins": 0
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 8,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 9,
+      "points": 13,
+      "wins": 1
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2004": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 262,
+      "wins": 15
+    },
+    {
+      "constructorId": "bar",
+      "nationality": "British",
+      "position": 2,
+      "points": 119,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 3,
+      "points": 105,
+      "wins": 1
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 4,
+      "points": 88,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 5,
+      "points": 69,
+      "wins": 1
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 6,
+      "points": 34,
+      "wins": 0
+    },
+    {
+      "constructorId": "jaguar",
+      "nationality": "British",
+      "position": 7,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 8,
+      "points": 9,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 9,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    }
+  ],
+  "2005": [
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 1,
+      "points": 191,
+      "wins": 8
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 182,
+      "wins": 10
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 100,
+      "wins": 1
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 4,
+      "points": 88,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 5,
+      "points": 66,
+      "wins": 0
+    },
+    {
+      "constructorId": "bar",
+      "nationality": "British",
+      "position": 6,
+      "points": 38,
+      "wins": 0
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 7,
+      "points": 34,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 20,
+      "wins": 0
+    },
+    {
+      "constructorId": "jordan",
+      "nationality": "Irish",
+      "position": 9,
+      "points": 12,
+      "wins": 0
+    },
+    {
+      "constructorId": "minardi",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 7,
+      "wins": 0
+    }
+  ],
+  "2006": [
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 1,
+      "points": 206,
+      "wins": 8
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 201,
+      "wins": 9
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 110,
+      "wins": 0
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 4,
+      "points": 86,
+      "wins": 1
+    },
+    {
+      "constructorId": "bmw_sauber",
+      "nationality": "German",
+      "position": 5,
+      "points": 36,
+      "wins": 0
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 6,
+      "points": 35,
+      "wins": 0
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 7,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 8,
+      "points": 11,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "mf1",
+      "nationality": "Russian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "super_aguri",
+      "nationality": "Japanese",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "spyker_mf1",
+      "nationality": "Dutch",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2007": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 204,
+      "wins": 9
+    },
+    {
+      "constructorId": "bmw_sauber",
+      "nationality": "German",
+      "position": 2,
+      "points": 101,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 3,
+      "points": 51,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 4,
+      "points": 33,
+      "wins": 0
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 5,
+      "points": 24,
+      "wins": 0
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 6,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 8,
+      "points": 6,
+      "wins": 0
+    },
+    {
+      "constructorId": "super_aguri",
+      "nationality": "Japanese",
+      "position": 9,
+      "points": 4,
+      "wins": 0
+    },
+    {
+      "constructorId": "spyker",
+      "nationality": "Dutch",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 11,
+      "points": 218,
+      "wins": 8
+    }
+  ],
+  "2008": [
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 1,
+      "points": 172,
+      "wins": 8
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 151,
+      "wins": 6
+    },
+    {
+      "constructorId": "bmw_sauber",
+      "nationality": "German",
+      "position": 3,
+      "points": 135,
+      "wins": 1
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 4,
+      "points": 80,
+      "wins": 2
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 5,
+      "points": 56,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 39,
+      "wins": 1
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 7,
+      "points": 29,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 8,
+      "points": 26,
+      "wins": 0
+    },
+    {
+      "constructorId": "honda",
+      "nationality": "Japanese",
+      "position": 9,
+      "points": 14,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "super_aguri",
+      "nationality": "Japanese",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2009": [
+    {
+      "constructorId": "brawn",
+      "nationality": "British",
+      "position": 1,
+      "points": 172,
+      "wins": 8
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 2,
+      "points": 153.5,
+      "wins": 6
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 71,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 70,
+      "wins": 1
+    },
+    {
+      "constructorId": "toyota",
+      "nationality": "Japanese",
+      "position": 5,
+      "points": 59.5,
+      "wins": 0
+    },
+    {
+      "constructorId": "bmw_sauber",
+      "nationality": "German",
+      "position": 6,
+      "points": 36,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 7,
+      "points": 34.5,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 8,
+      "points": 26,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 9,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 10,
+      "points": 8,
+      "wins": 0
+    }
+  ],
+  "2010": [
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 1,
+      "points": 498,
+      "wins": 9
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 454,
+      "wins": 5
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 396,
+      "wins": 5
+    },
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 4,
+      "points": 214,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 5,
+      "points": 163,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 6,
+      "points": 69,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 7,
+      "points": 68,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 44,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus_racing",
+      "nationality": "Malaysian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "hrt",
+      "nationality": "Spanish",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "virgin",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2011": [
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 1,
+      "points": 650,
+      "wins": 12
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 2,
+      "points": 497,
+      "wins": 6
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 375,
+      "wins": 1
+    },
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 4,
+      "points": 165,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 5,
+      "points": 73,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 6,
+      "points": 69,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 7,
+      "points": 44,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 8,
+      "points": 41,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 9,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus_racing",
+      "nationality": "Malaysian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "hrt",
+      "nationality": "Spanish",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "virgin",
+      "nationality": "British",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2012": [
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 1,
+      "points": 460,
+      "wins": 7
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 400,
+      "wins": 3
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 378,
+      "wins": 7
+    },
+    {
+      "constructorId": "lotus_f1",
+      "nationality": "British",
+      "position": 4,
+      "points": 303,
+      "wins": 1
+    },
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 5,
+      "points": 142,
+      "wins": 1
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 6,
+      "points": 126,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 7,
+      "points": 109,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 8,
+      "points": 76,
+      "wins": 1
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 26,
+      "wins": 0
+    },
+    {
+      "constructorId": "caterham",
+      "nationality": "Malaysian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "marussia",
+      "nationality": "Russian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "hrt",
+      "nationality": "Spanish",
+      "position": 12,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2013": [
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 1,
+      "points": 596,
+      "wins": 13
+    },
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 2,
+      "points": 360,
+      "wins": 3
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 354,
+      "wins": 2
+    },
+    {
+      "constructorId": "lotus_f1",
+      "nationality": "British",
+      "position": 4,
+      "points": 315,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 5,
+      "points": 122,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 6,
+      "points": 77,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 7,
+      "points": 57,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 8,
+      "points": 33,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 9,
+      "points": 5,
+      "wins": 0
+    },
+    {
+      "constructorId": "marussia",
+      "nationality": "Russian",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "caterham",
+      "nationality": "Malaysian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2014": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 701,
+      "wins": 16
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 2,
+      "points": 405,
+      "wins": 3
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 3,
+      "points": 320,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 4,
+      "points": 216,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 5,
+      "points": 181,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 6,
+      "points": 155,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 30,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus_f1",
+      "nationality": "British",
+      "position": 8,
+      "points": 10,
+      "wins": 0
+    },
+    {
+      "constructorId": "marussia",
+      "nationality": "Russian",
+      "position": 9,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    },
+    {
+      "constructorId": "caterham",
+      "nationality": "Malaysian",
+      "position": 11,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2015": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 703,
+      "wins": 16
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 428,
+      "wins": 3
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 3,
+      "points": 257,
+      "wins": 0
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 4,
+      "points": 187,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 5,
+      "points": 136,
+      "wins": 0
+    },
+    {
+      "constructorId": "lotus_f1",
+      "nationality": "British",
+      "position": 6,
+      "points": 78,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 67,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 36,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 9,
+      "points": 27,
+      "wins": 0
+    },
+    {
+      "constructorId": "manor",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2016": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 765,
+      "wins": 19
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 2,
+      "points": 468,
+      "wins": 2
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 398,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 4,
+      "points": 173,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 5,
+      "points": 138,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 6,
+      "points": 76,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 63,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 8,
+      "points": 29,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 9,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 10,
+      "points": 2,
+      "wins": 0
+    },
+    {
+      "constructorId": "manor",
+      "nationality": "British",
+      "position": 11,
+      "points": 1,
+      "wins": 0
+    }
+  ],
+  "2017": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 668,
+      "wins": 12
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 522,
+      "wins": 5
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 3,
+      "points": 368,
+      "wins": 3
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 4,
+      "points": 187,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 5,
+      "points": 83,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 6,
+      "points": 57,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 53,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 8,
+      "points": 47,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 9,
+      "points": 30,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 10,
+      "points": 5,
+      "wins": 0
+    }
+  ],
+  "2018": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 655,
+      "wins": 11
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 571,
+      "wins": 6
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 3,
+      "points": 419,
+      "wins": 4
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 4,
+      "points": 122,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 5,
+      "points": 93,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 6,
+      "points": 62,
+      "wins": 0
+    },
+    {
+      "constructorId": "force_india",
+      "nationality": "Indian",
+      "position": 7,
+      "points": 52,
+      "wins": 0
+    },
+    {
+      "constructorId": "sauber",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 48,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 33,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 10,
+      "points": 7,
+      "wins": 0
+    }
+  ],
+  "2019": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 739,
+      "wins": 15
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 504,
+      "wins": 3
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 3,
+      "points": 417,
+      "wins": 3
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 4,
+      "points": 145,
+      "wins": 0
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 5,
+      "points": 91,
+      "wins": 0
+    },
+    {
+      "constructorId": "toro_rosso",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 85,
+      "wins": 0
+    },
+    {
+      "constructorId": "racing_point",
+      "nationality": "British",
+      "position": 7,
+      "points": 73,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 57,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 9,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 10,
+      "points": 1,
+      "wins": 0
+    }
+  ],
+  "2020": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 573,
+      "wins": 13
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 2,
+      "points": 319,
+      "wins": 2
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 3,
+      "points": 202,
+      "wins": 0
+    },
+    {
+      "constructorId": "racing_point",
+      "nationality": "British",
+      "position": 4,
+      "points": 195,
+      "wins": 1
+    },
+    {
+      "constructorId": "renault",
+      "nationality": "French",
+      "position": 5,
+      "points": 181,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 131,
+      "wins": 0
+    },
+    {
+      "constructorId": "alphatauri",
+      "nationality": "Italian",
+      "position": 7,
+      "points": 107,
+      "wins": 1
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 8,
+      "points": 8,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 9,
+      "points": 3,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2021": [
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 1,
+      "points": 613.5,
+      "wins": 9
+    },
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 2,
+      "points": 585.5,
+      "wins": 11
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 323.5,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 4,
+      "points": 275,
+      "wins": 1
+    },
+    {
+      "constructorId": "alpine",
+      "nationality": "French",
+      "position": 5,
+      "points": 155,
+      "wins": 1
+    },
+    {
+      "constructorId": "alphatauri",
+      "nationality": "Italian",
+      "position": 6,
+      "points": 142,
+      "wins": 0
+    },
+    {
+      "constructorId": "aston_martin",
+      "nationality": "British",
+      "position": 7,
+      "points": 77,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 8,
+      "points": 23,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 9,
+      "points": 13,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 10,
+      "points": 0,
+      "wins": 0
+    }
+  ],
+  "2022": [
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 1,
+      "points": 759,
+      "wins": 17
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 2,
+      "points": 554,
+      "wins": 4
+    },
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 3,
+      "points": 515,
+      "wins": 1
+    },
+    {
+      "constructorId": "alpine",
+      "nationality": "French",
+      "position": 4,
+      "points": 173,
+      "wins": 0
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 5,
+      "points": 159,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 6,
+      "points": 55,
+      "wins": 0
+    },
+    {
+      "constructorId": "aston_martin",
+      "nationality": "British",
+      "position": 7,
+      "points": 55,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 8,
+      "points": 37,
+      "wins": 0
+    },
+    {
+      "constructorId": "alphatauri",
+      "nationality": "Italian",
+      "position": 9,
+      "points": 35,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 10,
+      "points": 8,
+      "wins": 0
+    }
+  ],
+  "2023": [
+    {
+      "constructorId": "red_bull",
+      "nationality": "Austrian",
+      "position": 1,
+      "points": 860,
+      "wins": 21
+    },
+    {
+      "constructorId": "mercedes",
+      "nationality": "German",
+      "position": 2,
+      "points": 409,
+      "wins": 0
+    },
+    {
+      "constructorId": "ferrari",
+      "nationality": "Italian",
+      "position": 3,
+      "points": 406,
+      "wins": 1
+    },
+    {
+      "constructorId": "mclaren",
+      "nationality": "British",
+      "position": 4,
+      "points": 302,
+      "wins": 0
+    },
+    {
+      "constructorId": "aston_martin",
+      "nationality": "British",
+      "position": 5,
+      "points": 280,
+      "wins": 0
+    },
+    {
+      "constructorId": "alpine",
+      "nationality": "French",
+      "position": 6,
+      "points": 120,
+      "wins": 0
+    },
+    {
+      "constructorId": "williams",
+      "nationality": "British",
+      "position": 7,
+      "points": 28,
+      "wins": 0
+    },
+    {
+      "constructorId": "alphatauri",
+      "nationality": "Italian",
+      "position": 8,
+      "points": 25,
+      "wins": 0
+    },
+    {
+      "constructorId": "alfa",
+      "nationality": "Swiss",
+      "position": 9,
+      "points": 16,
+      "wins": 0
+    },
+    {
+      "constructorId": "haas",
+      "nationality": "American",
+      "position": 10,
+      "points": 12,
+      "wins": 0
+    }
+  ]
+}
