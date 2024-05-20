@@ -7,7 +7,10 @@ import Switch from "@mui/material/Switch";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
-
+import { styled } from '@mui/material/styles';
+// import Switch from '@mui/material/Switch';
+// import Stack from '@mui/material/Stack';
+// import Typography from '@mui/material/Typography';
 
 const lowerBound = 1950;
 const upperBound = 2024;
@@ -42,7 +45,56 @@ const fetchDataForYear = async (year) => {
 };
 
 
-
+const IOSSwitch = styled((props) => (
+    <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
+))(({ theme }) => ({
+    width: 42,
+    height: 26,
+    padding: 0,
+    '& .MuiSwitch-switchBase': {
+        padding: 0,
+        margin: 2,
+        transitionDuration: '300ms',
+        '&.Mui-checked': {
+            transform: 'translateX(16px)',
+            color: '#fff',
+            '& + .MuiSwitch-track': {
+                backgroundColor: theme.palette.mode === 'dark' ? '#1890ff' : '#1890ff',
+                opacity: 1,
+                border: 0,
+            },
+            '&.Mui-disabled + .MuiSwitch-track': {
+                opacity: 1,
+            },
+        },
+        '&.Mui-focusVisible .MuiSwitch-thumb': {
+            color: '#2ECA45',
+            border: '6px solid #fff',
+        },
+        '&.Mui-disabled .MuiSwitch-thumb': {
+            color:
+                theme.palette.mode === 'light'
+                    ? theme.palette.grey[100]
+                    : theme.palette.grey[600],
+        },
+        '&.Mui-disabled + .MuiSwitch-track': {
+            opacity: theme.palette.mode === 'light' ? 0.7 : 0.3,
+        },
+    },
+    '& .MuiSwitch-thumb': {
+        boxSizing: 'border-box',
+        width: 22,
+        height: 22,
+    },
+    '& .MuiSwitch-track': {
+        borderRadius: 26 / 2,
+        backgroundColor: theme.palette.mode === 'light' ? '#1890ff' : '#1890ff',
+        opacity: 1,
+        transition: theme.transitions.create(['background-color'], {
+            duration: 500,
+        }),
+    },
+}));
 const Standings = () => {
     const [value, setValue] = useState(defaultValueSlider);
     const [yearlyData, setYearlyData] = useState({});
@@ -133,22 +185,26 @@ const Standings = () => {
                 />
 
             </div>
+            <Stack direction="row" spacing={1} alignItems="center">
+                <Typography>Constructor</Typography>
+                <IOSSwitch defaultChecked />
+                <Typography>Driver</Typography>
+            </Stack>
             <Stack direction="row" component="label" alignItems="center" justifyContent="center">
                 <Typography>
-                    Off
+                    Constructor
                 </Typography>
                 <Switch onChange={toggleCollapsed} value={collapsed} sx={{
                     "&.MuiSwitch-root .MuiSwitch-switchBase": {
-                        color: "red"
+                        color: "#1890ff",
                     },
 
                     "&.MuiSwitch-root .Mui-checked": {
-                        color: "red"
+                        color: "#1890ff"
                     }
                 }} />
-                <Switch onChange={toggleCollapsed} value={collapsed} color='secondary' />
                 <Typography>
-                    On
+                    Driver
                 </Typography>
             </Stack>
             <h2>Aggregated {mode === 'driver' ? 'Driver' : 'Constructor'} Standings: {value[0]} - {value[1]}</h2>
