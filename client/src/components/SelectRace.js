@@ -1,9 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function SelectRace({year, setYear, circuit, setCircuit, round, setRound, selectedDrivers, setSelectedDrivers, drivercodes, setDriverCodes}) {
     const [data, setData] = useState([{}]);
 
+    let driverdata = {};
+
     const years = Array.from({ length: 29 }, (_, index) => 1996 + index);
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/driverinfo?year=${year}&round=${round}&drivers=${drivercodes.join(',')}`)
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                // Display the lap time chart here
+                console.log(data);
+                driverdata = data;
+                renderDriverList(selectedDrivers);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }, [drivercodes]);
 
     const fetchData = () => {
         let driverselect = document.getElementById("drivers");
@@ -105,54 +126,53 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
         if (selectedDrivers.includes(selected)) {
             return;
         }
-        selectedDrivers.push(selected);
-        drivercodes.push(drivercode);
-        setSelectedDrivers(selectedDrivers);
-        setDriverCodes(drivercodes);
+        const newSelectedDrivers = [...selectedDrivers, selected];
+        const newDriverCodes = [...drivercodes, drivercode];
+        setSelectedDrivers(newSelectedDrivers);
+        setDriverCodes(newDriverCodes);
+        renderDriverList(newSelectedDrivers);
+    }
+    
+    function deleteDriver(driver) {
+        const newSelectedDrivers = selectedDrivers.filter(d => d !== driver);
+        const newDriverCodes = drivercodes.filter(code => code !== drivercodes[selectedDrivers.indexOf(driver)]);
+        setSelectedDrivers(newSelectedDrivers);
+        setDriverCodes(newDriverCodes);
+        renderDriverList(newSelectedDrivers);
+    }
+    
+    function renderDriverList(drivers) {
         let driverslist = document.getElementById("driversList");
         driverslist.innerHTML = "";
-        for (let i = 0; i < selectedDrivers.length; i++) {
+        for (let i = 0; i < drivers.length; i++) {
             let driver = document.createElement("div");
             driver.className = "driver";
-            // add name, image and delete button to driver list
+            
+            // Create an image element for the driver's picture
             let driverimage = document.createElement("img");
-            driverimage.src = "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Driver%20profile%20images%202018/hamilton.png.transform/4col/image.png";
+            // Set the src attribute to the driver's image URL
+            driverimage.src = `https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Driver%20profile%20images%202018/${drivers[i]}.png.transform/4col/image.png`;
+            // Set alt text for accessibility
+            driverimage.alt = `${drivers[i]}'s picture`;
+            // Append the image to the driver div
             driver.appendChild(driverimage);
+            
             let drivername = document.createElement("p");
-            drivername.innerHTML = selectedDrivers[i];
+            drivername.innerHTML = drivers[i];
             driver.appendChild(drivername);
             let deletebutton = document.createElement("button");
             deletebutton.innerHTML = "delete";
-            // Use a closure to capture the correct value of i
-            deletebutton.onclick = (function(i){
-                return function(){
-                    deleteDriver(selectedDrivers[i]);
+            deletebutton.onclick = (function (i) {
+                return function () {
+                    deleteDriver(drivers[i]);
                 }
             })(i);
             driver.appendChild(deletebutton);
             driverslist.appendChild(driver);
         }
     }
-
-    function deleteDriver(driver){
-        console.log(driver);
-        for (let i = 0; i < selectedDrivers.length; i++){
-            if (selectedDrivers[i] === driver){
-                selectedDrivers.splice(i, 1);
-                drivercodes.splice(i, 1);
-            }
-        }
-        setSelectedDrivers(selectedDrivers);
-        setDriverCodes(drivercodes);
-
-        let driverslist = document.getElementById("driversList");
-        for (let e of driverslist.children){
-            if(e.children[1].innerHTML === driver){
-                e.remove();
-            }
-        }
-
-    }
+    
+    
 
     return (
         <div id="drivercompare">
@@ -172,7 +192,7 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
                     <select id="drivers" multiple>
                     </select>
                 </div>
-                <button id="addDriver" onClick={addDriver}>add driver</button>
+                <button id="addDriver" onClick={(e) => addDriver()}>add driver</button>
             </div>
             <div id="driversList">
             </div>

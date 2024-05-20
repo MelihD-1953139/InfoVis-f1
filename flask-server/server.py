@@ -29,9 +29,26 @@ def tyres():
         tyre_data = list(tyre_data.values())
         all_compounds[driver] = tyre_data
 
-    print(all_compounds)
-
     return all_compounds
+
+@app.route('/driverinfo')
+def driverinfo():
+    drivers = request.args.get('drivers')
+
+    drivers = drivers.split(",")
+
+    all_driver_info = {}
+
+    for driver in drivers:
+        color = fastf1.ff1.plotting.driver_color(driver)
+        print(color)
+        driver_info = {
+            "color": color
+        }
+
+
+    return all_driver_info
+
 # Route
 @app.route('/year/<int:year>')
 def test(year):

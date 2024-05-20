@@ -11,7 +11,13 @@ function LapGraph({ year, session, selectedDrivers, drivercodes }) {
     const [lapTimes, setLapTimes] = useState([]);
     const [tyreData, setTyreData] = useState([{}]);
     const [tyrecolors, setTyreColors] = useState([]);
-    const [driverColors, setDriverColors] = useState([]);   
+    const [driverColors, setDriverColors] = useState([]);  
+
+    useEffect(() => {
+        fetchData();
+        setTyreColors([]);
+        getTyreData();
+    }, [selectedDrivers]);
 
     const fetchData = () => {
         setLabels([]);
@@ -50,7 +56,7 @@ function LapGraph({ year, session, selectedDrivers, drivercodes }) {
         if (selectedDrivers.length === 0) {
             return;
         }
-        fetch("http://localhost:8000/tyres?year=" + year + "&round=" + session + "&drivers=" + drivercodes.join(','))
+        fetch(`http://localhost:8000/tyres?year=${year}&round=${session}&drivers=${drivercodes.join(',')}`)
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
@@ -120,133 +126,120 @@ function LapGraph({ year, session, selectedDrivers, drivercodes }) {
     }
 
     return (
-        
         <div id="graphcontainer">
-            <button onClick={() => { fetchData(); getTyreData(); }}>Get Lap Data</button>
-                {selectedDrivers.length > 0 && (
-                    <Line
-                        data={{
-                            labels: labels.map((lap) => `${lap}`),
-                            datasets: selectedDrivers.map((driver, index) => {
-                                driverColors.push(getRandomColor());
-                                // if (!tyrecolors[index]) {
-                                //     console.error(`Tyre colors for driver ${driver} are undefined.`);
-                                //     return null;
-                                // }
-                
-                                let laptimes = [];
-                                let dotColors = []; // Create a separate array for dot colors
-                                
-                                for (let i = 0; i < lapTimes.length; i++) {
-                                    laptimes.push(lapTimes[i][index]);
-                                    if (tyrecolors[index]) {
-                                        dotColors.push(tyrecolors[index][i]);
-                                    }
-                                }
-                                return {
-                                    label: driver,
-                                    data: laptimes,
-                                    fill: false,
-                                    borderColor: driverColors[index], // Use the driver color for borderColor
-                                    backgroundColor: dotColors, // Use the colors array for backgroundColor
-                                    pointBackgroundColor: dotColors, // Use the colors array for pointBackgroundColor
-                                    // bigger point size
-                                    pointRadius: 3.5,
-                                    tension: 0.1
-                                };
-                            }).filter(dataset => dataset !== null) // Filter out null datasets
-                        }}
-                        height={600}
-                        width={1000}
-                        options={{
-                            plugins: {
-                                title: {
-                                    display: true,
-                                    text: 'Laptimes'
-                                }
-                            },
-                            scales: {
-                                x: {
-                                    type: 'linear',
-                                    title: {
-                                        display: true,
-                                        text: 'Lap'
-                                    }
-                                },
-                                y: {
-                                    type: 'linear',
-                                    title: {
-                                        display: true,
-                                        text: 'Time (seconds)'
-                                    }
+            {selectedDrivers.length > 0 && (
+                <Line
+                    data={{
+                        labels: labels.map((lap) => `${lap}`),
+                        datasets: selectedDrivers.map((driver, index) => {
+                            driverColors.push(getRandomColor());
+                            let laptimes = [];
+                            let dotColors = []; // Create a separate array for dot colors
+                            
+                            for (let i = 0; i < lapTimes.length; i++) {
+                                laptimes.push(lapTimes[i][index]);
+                                if (tyrecolors[index]) {
+                                    dotColors.push(tyrecolors[index][i]);
                                 }
                             }
-                        }}
-                    />
-                )}
-                    {/* chart that plots the difference between the mean times of the drivers*/}
-                    <Line
-                        data={{
-                            labels: labels.map((lap) => `${lap}`),
-                            datasets: selectedDrivers.map((driver, index) => {
-                                let laptimes = [];
-                                let lineColor = getRandomColor(); // Get random color for the line
-                                let dotColors = []; // Create a separate array for dot colors
-                                for (let i = 0; i < lapTimes.length; i++) {
-                                    laptimes.push(lapTimes[i][index]);
-                                    if (tyrecolors[index]) {
-                                        dotColors.push(tyrecolors[index][i]);
-                                    }
-                                }
-                                laptimes = calcTimeDiffMean(laptimes);
-                                
-                                return {
-                                    label: driver,
-                                    data: laptimes,
-                                    fill: false,
-                                    borderColor: driverColors[index], // Use the random color for borderColor
-                                    backgroundColor: dotColors, // Use the colors array for backgroundColor
-                                    pointBackgroundColor: dotColors, // Use the colors array for pointBackgroundColor
-                                    // bigger point size
-                                    pointRadius: 3.5,
-                                    tension: 0.1
-                                };
-                            }).filter(dataset => dataset !== null) // Filter out null datasets
-                        }}
-                        height={600}
-                        width={1000}
-                        options={{
-                            plugins: {
+                            return {
+                                label: driver,
+                                data: laptimes,
+                                fill: false,
+                                borderColor: driverColors[index], // Use the driver color for borderColor
+                                backgroundColor: dotColors, // Use the colors array for backgroundColor
+                                pointBackgroundColor: dotColors, // Use the colors array for pointBackgroundColor
+                                // bigger point size
+                                pointRadius: 3.5,
+                                tension: 0.1
+                            };
+                        }).filter(dataset => dataset !== null) // Filter out null datasets
+                    }}
+                    height={600}
+                    width={1000}
+                    options={{
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Laptimes'
+                            }
+                        },
+                        scales: {
+                            x: {
+                                type: 'linear',
                                 title: {
                                     display: true,
-                                    text: 'Difference from mean laptime'
+                                    text: 'Lap'
                                 }
                             },
-                            scales: {
-                                x: {
-                                    type: 'linear',
-                                    title: {
-                                        display: true,
-                                        text: 'Lap'
-                                    }
-                                },
-                                y: {
-                                    type: 'linear',
-                                    title: {
-                                        display: true,
-                                        text: 'TimeDiff (seconds)'
-                                    }
+                            y: {
+                                type: 'linear',
+                                title: {
+                                    display: true,
+                                    text: 'Time (seconds)'
                                 }
                             }
-                        }}
-
-                    />
-                    <Racegraph
-                        year={year}
-                        session={session}
-                        selectedDrivers={selectedDrivers}
-                    />
-            </div>
+                        }
+                    }}
+                />
+            )}
+            <Line
+                data={{
+                    labels: labels.map((lap) => `${lap}`),
+                    datasets: selectedDrivers.map((driver, index) => {
+                        let laptimes = [];
+                        let lineColor = getRandomColor(); // Get random color for the line
+                        let dotColors = []; // Create a separate array for dot colors
+                        for (let i = 0; i < lapTimes.length; i++) {
+                            laptimes.push(lapTimes[i][index]);
+                            if (tyrecolors[index]) {
+                                dotColors.push(tyrecolors[index][i]);
+                            }
+                        }
+                        laptimes = calcTimeDiffMean(laptimes);
+                        
+                        return {
+                            label: driver,
+                            data: laptimes,
+                            fill: false,
+                            borderColor: driverColors[index], // Use the random color for borderColor
+                            backgroundColor: dotColors, // Use the colors array for backgroundColor
+                            pointBackgroundColor: dotColors, // Use the colors array for pointBackgroundColor
+                            // bigger point size
+                            pointRadius: 3.5,
+                            tension: 0.1
+                        };
+                    }).filter(dataset => dataset !== null) // Filter out null datasets
+                }}
+                height={600}
+                width={1000}
+                options={{
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Difference from mean laptime'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            title: {
+                                display: true,
+                                text: 'Lap'
+                            }
+                        },
+                        y: {
+                            type: 'linear',
+                            title: {
+                                display: true,
+                                text: 'Difference from mean laptime (seconds)'
+                            }
+                        }
+                    }
+                }}
+            />
+            <Racegraph year={year} session={session} selectedDrivers={selectedDrivers} drivercodes={drivercodes}/>
+        </div>
     );
 }
 
