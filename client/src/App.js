@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Racegraph from './components/racegraph';
-import V from './components/v';
+import DriverCompare from './components/DriverCompare';
+
+import './App.css';
+
 function App() {
     return (
         <div>
-            <Racegraph />
-            {/* <V /> */}
+            <DriverCompare />
         </div>
-
     );
 }
 

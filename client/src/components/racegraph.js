@@ -5,10 +5,10 @@ import { Chart } from 'react-chartjs-2'
 import zoomPlugin from 'chartjs-plugin-zoom';
 
 import { compoundSymbol, symbolWithLabel } from '../util/symbolsCanvas';
-
+// import 'bootstrap/dist/css/bootstrap.css';
 
 ChartJS.register(zoomPlugin);
-function Racegraph({year, session, selectedDrivers}) {
+function Racegraph({ year, session, selectedDrivers }) {
     // const [selectedYear, setSelectedYear] = useState(2024);
     const [data, setData] = useState({});
     const [raceData, setRaceData] = useState(new Map());
@@ -17,7 +17,7 @@ function Racegraph({year, session, selectedDrivers}) {
     // const handleChange = (event) => {
     //     setSelectedYear(parseInt(event.target.value));
     // };
-
+    year = '2021'
     const apiEndpoints = [
         'http://ergast.com/api/f1/' + year + '/' + session + '/results.json',
         'http://ergast.com/api/f1/' + year + '/' + session + '/laps.json?limit=2000',
@@ -76,7 +76,7 @@ function Racegraph({year, session, selectedDrivers}) {
 
     const processFirstAPIData = (data) => {
         data.MRData.RaceTable.Races[0].Results.forEach(driver => {
-            if (selectedDrivers.includes(driver.Driver.driverId)){
+            if (true) {
                 console.log("been here");
                 const driverId = driver.Driver.driverId;
                 const driverInfo = {
@@ -100,7 +100,7 @@ function Racegraph({year, session, selectedDrivers}) {
     const processSecondAPIData = (data) => {
         data.MRData.RaceTable.Races[0].Laps.forEach((lap) => {
             lap.Timings.forEach((timing) => {
-                if (selectedDrivers.includes(timing.driverId)){
+                if (true) {
                     const driverId = timing.driverId;
                     const position = parseInt(timing.position);
 
@@ -113,15 +113,15 @@ function Racegraph({year, session, selectedDrivers}) {
                         //raceData.set(driverId, driverInfo); // Update driver info in driversMap
                     }
                 }
-                
+
             });
         });
     };
 
     const processThirdAPIData = (data) => {
         data.MRData.RaceTable.Races[0].PitStops.forEach((pitstop) => {
-            if (selectedDrivers.includes(pitstop.driverId)){
-            
+            if (true) {
+
                 const driverId = pitstop.driverId;
                 const pitLap = parseInt(pitstop.lap);
                 const driverInfo = raceData.get(driverId);
@@ -261,7 +261,7 @@ function Racegraph({year, session, selectedDrivers}) {
 
         const gridPositions = {}
         raceData.forEach((driver) => {
-            if (selectedDrivers.includes(driver.name)){
+            if (selectedDrivers.includes(driver.name)) {
                 gridPositions[driver.grid] = driver.name;
             }
         })
@@ -407,16 +407,23 @@ function Racegraph({year, session, selectedDrivers}) {
                 }
             }
         };
-        
+
 
 
 
 
         return (
-            <div style={{ backgroundColor: 'black', height: '650px' }}>
-                <h2>Race Positions</h2>
-                <Line data={chartData} options={chartOptions} />
+            <div>
+                <div class="flex flex-col justify-center items-center bg-white h-screen">
+                    <h2>Race Positions</h2>
+                    <div class="w-11/12">
+                        <Line data={chartData} options={chartOptions} />
+                    </div>
+
+                </div>
             </div>
+
+
         );
     };
 
@@ -433,7 +440,7 @@ function Racegraph({year, session, selectedDrivers}) {
             {/* {loading ? (
                 <p>Loading...</p>
             ) : ( */}
-                {renderGraph()}
+            {renderGraph()}
             {/* )} */}
         </div>
     );
