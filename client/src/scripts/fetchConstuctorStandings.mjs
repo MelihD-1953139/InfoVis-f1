@@ -13,7 +13,7 @@ const fetchDataForYear = async (year) => {
 
     return standingsList[0].ConstructorStandings.map(constructorStanding => ({
         constructorId: constructorStanding.Constructor.constructorId,
-        name: constructorStanding.Constructor.givenName,
+        name: constructorStanding.Constructor.name,
         nationality: constructorStanding.Constructor.nationality,
         position: parseFloat(constructorStanding.position),
         points: parseFloat(constructorStanding.points),
@@ -28,7 +28,7 @@ const fetchAndSaveData = async () => {
         const standings = await fetchDataForYear(year);
         data[year] = standings;
     }
-    await fs.writeFile('public/constructorStandings.json', JSON.stringify(data, null, 2));
+    await fs.writeFile('public/constructorPointsWinsStanding.json', JSON.stringify(data, null, 2));
     console.log('Data saved to public/constructorStandings.json');
 };
 

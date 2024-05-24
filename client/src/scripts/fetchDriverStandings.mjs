@@ -28,7 +28,7 @@ const fetchAndSaveData = async () => {
         const standings = await fetchDataForYear(year);
         data[year] = standings;
     }
-    await fs.writeFile('public/driverPointStandings.json', JSON.stringify(data, null, 2));
+    await fs.writeFile('public/driverPointsWinsStanding.json', JSON.stringify(data, null, 2));
     console.log('Data saved to public/driverPointStandings.json');
 };
 

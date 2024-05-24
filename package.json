@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "react-range": "^1.8.14"
+    "namor": "^3.0.1",
+    "react-range": "^1.8.14",
+    "react-table-6": "^6.11.0",
+    "styled-components": "^6.1.11"
   }
 }
