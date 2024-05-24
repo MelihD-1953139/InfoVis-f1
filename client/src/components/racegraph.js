@@ -18,6 +18,7 @@ function Racegraph({ year, session, selectedDrivers }) {
     //     setSelectedYear(parseInt(event.target.value));
     // };
     year = '2021'
+    session = '1'
     const apiEndpoints = [
         'http://ergast.com/api/f1/' + year + '/' + session + '/results.json',
         'http://ergast.com/api/f1/' + year + '/' + session + '/laps.json?limit=2000',
@@ -261,9 +262,10 @@ function Racegraph({ year, session, selectedDrivers }) {
 
         const gridPositions = {}
         raceData.forEach((driver) => {
-            if (selectedDrivers.includes(driver.name)) {
-                gridPositions[driver.grid] = driver.name;
-            }
+            // if (selectedDrivers.includes(driver.name)) {
+            //     gridPositions[driver.grid] = driver.name;
+            // }
+            gridPositions[driver.grid] = driver.name;
         })
 
 
