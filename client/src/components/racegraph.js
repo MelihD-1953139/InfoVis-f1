@@ -3,7 +3,11 @@ import { Bar, Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart } from 'react-chartjs-2'
 import zoomPlugin from 'chartjs-plugin-zoom';
-
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 import { compoundSymbol, symbolWithLabel } from '../util/symbolsCanvas';
 // import 'bootstrap/dist/css/bootstrap.css';
 
@@ -14,16 +18,22 @@ function Racegraph({ year, session, selectedDrivers }) {
     const [raceData, setRaceData] = useState(new Map());
     const [loading, setLoading] = useState(true);
 
+
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
     // const handleChange = (event) => {
     //     setSelectedYear(parseInt(event.target.value));
     // };
-    year = '2021'
+    year = '2024'
     session = '1'
     const apiEndpoints = [
         'http://ergast.com/api/f1/' + year + '/' + session + '/results.json',
         'http://ergast.com/api/f1/' + year + '/' + session + '/laps.json?limit=2000',
         'http://ergast.com/api/f1/' + year + '/' + session + '/pitstops.json?limit=2000',
-        '/' + year + '/' + session + '/tires'
+        'http://localhost:8000/' + year + '/' + session + '/tires'
     ];
 
     useEffect(() => {
@@ -92,6 +102,7 @@ function Racegraph({ year, session, selectedDrivers }) {
                     pitstops: [],
                     compounds: [],
                     stintlength: [],
+                    color: '',
                 };
                 raceData.set(driverId, driverInfo);
             }
@@ -144,6 +155,7 @@ function Racegraph({ year, session, selectedDrivers }) {
                 if (driverInfo) {
                     driverInfo.compounds = driverData.compound;
                     driverInfo.stintlength = driverData.stintlength;
+                    driverInfo.color = driverData.color;
                 }
 
             }
@@ -151,12 +163,18 @@ function Racegraph({ year, session, selectedDrivers }) {
     };
 
 
-    const softCompound = compoundSymbol('XS', 'red');
+    const softCompound = compoundSymbol('S', 'red');
     const mediumCompound = compoundSymbol('M', 'yellow');
     const hardCompound = compoundSymbol('H', 'white');
-
+    // 'WET': 'rgba(54, 162, 235, 1)',//blue
+    // 'SOFT': 'rgba(255, 99, 132, 1)', // Red
+    // 'MEDIUM': 'rgba(255, 206, 86, 1)', // Yellow
+    // 'HARD': 'rgb(255,255,255, 1)', // white
+    // 'INTERMEDIATE': 'rgba(75, 192, 192, 1)', // Green
+    // 'SUPERSOFT': 'rgba(128, 0, 128, 1)', // Purple
     const driverIdToColorMap = {};
 
+    const driverColors = {};
     var mechanicalList = [
         "Mechanical",
         "Tyre",
@@ -185,6 +203,9 @@ function Racegraph({ year, session, selectedDrivers }) {
 
 
         function compoundd(compound) {
+            if (compound === 'SOFT') return softCompound;
+            if (compound === 'MEDIUM') return mediumCompound;
+            if (compound === 'HARD') return hardCompound;
             if (compound === 'SOFT') return softCompound;
             if (compound === 'MEDIUM') return mediumCompound;
             if (compound === 'HARD') return hardCompound;
@@ -240,25 +261,60 @@ function Racegraph({ year, session, selectedDrivers }) {
     };
 
     const renderGraph = () => {
-        const distinctColors = [
-            '#8b008b', "#ff4500", "#ffa500", "#949416", "#8a2be2",
-            "#dc143c", "#556b2f", "#8b4513", "#708090", "#483d8b",
-            "#008000", "#00bfff", "#f08080", "#9acd32", "#0000ff",
-            "#57852c", "#ff00ff", "#dda0dd", "#ff1493", "#1e90ff",
-            "#998e2b", "#2727f5"];
+        // const distinctColors = [
+        //     '#8b008b', "#ff4500", "#ffa500", "#949416", "#8a2be2",
+        //     "#dc143c", "#556b2f", "#8b4513", "#708090", "#483d8b",
+        //     "#008000", "#00bfff", "#f08080", "#9acd32", "#0000ff",
+        //     "#57852c", "#ff00ff", "#dda0dd", "#ff1493", "#1e90ff",
+        //     "#998e2b", "#2727f5"];
 
         const driverIds = Array.from(raceData.keys()).sort((a, b) => {
             return raceData.get(a).grid - raceData.get(b).grid;
         });
 
-        const driverNames = driverIds.map(driverId => raceData.get(driverId).code);
+        const driverNames = driverIds.map(driverId => raceData.get(driverId).name);
         const driverData = driverIds.map(driverId => raceData.get(driverId).positions);
         const tickLabels = driverIds.map(driverId => raceData.get(driverId).positions);
 
 
-        driverIds.forEach((driverId, index) => {
-            driverIdToColorMap[driverId] = distinctColors[index];
+        function darkenColor(hex, amount) {
+            let usePound = false;
+
+            if (hex[0] == "#") {
+                hex = hex.slice(1);
+                usePound = true;
+            }
+
+            let num = parseInt(hex, 16);
+
+            let r = (num >> 16) - amount;
+            let g = (num >> 8 & 0x00FF) - amount;
+            let b = (num & 0x0000FF) - amount;
+
+            r = r < 0 ? 0 : r;
+            g = g < 0 ? 0 : g;
+            b = b < 0 ? 0 : b;
+
+            return (usePound ? "#" : "") + (r << 16 | g << 8 | b).toString(16).padStart(6, '0');
+        }
+
+        // Darkening amount (adjust this value as needed)
+        const darkenAmount = 60;
+
+        // Step 1: Create a mapping of driver names to colors
+        const driverNameToColor = {};
+        driverIds.forEach(driverId => {
+            const driverInfo = raceData.get(driverId);
+            if (driverInfo) {
+                const darkenedColor = darkenColor(driverInfo.color, darkenAmount);
+                driverNameToColor[driverInfo.name] = darkenedColor;
+                driverIdToColorMap[driverId] = darkenedColor;
+            }
         });
+
+        // driverIds.forEach((driverId, index) => {
+        //     driverIdToColorMap[driverId] = distinctColors[index];
+        // });
 
         const gridPositions = {}
         raceData.forEach((driver) => {
@@ -285,17 +341,6 @@ function Racegraph({ year, session, selectedDrivers }) {
                 // hoverBackgroundColor: 'yellow',
             })),
         };
-
-        function labelColors() {
-            const colorsDrivers = distinctColors.slice(0, driverIds.length).reverse();
-            var times = maxLatestPlace - driverIds.length
-            for (let i = 0; i < times; i++) {
-                colorsDrivers.unshift('#FFFFFF');
-            }
-
-            colorsDrivers.push('#FFFFFF', '#FFFFFF');
-            return colorsDrivers;
-        }
 
         const chartOptions = {
             plugins: {
@@ -345,14 +390,6 @@ function Racegraph({ year, session, selectedDrivers }) {
 
             },
             responsive: true,
-            // maintainAspectRatio: false,
-            // borderWidth: 3,
-            // layout: {
-            //     padding: {
-            //         left: 50, // Adjust as needed
-            //         right: 50, // Adjust as needed
-            //     }
-            // },
             scales: {
                 x: {
                     type: 'linear',
@@ -391,7 +428,11 @@ function Racegraph({ year, session, selectedDrivers }) {
                                 return '';
                             }
                         },
-                        color: labelColors(),
+                        color: (c) => {
+                            console.log(c.tick.label);
+                            console.log(driverNameToColor[c.tick.label]);
+                            return driverNameToColor[c.tick.label]
+                        },
                         stepSize: 1,
                         autoSkip: false,
                         // backdropPadding: 15,
@@ -410,13 +451,43 @@ function Racegraph({ year, session, selectedDrivers }) {
             }
         };
 
-
-
-
-
         return (
             <div>
-                <div class="flex flex-col justify-center items-center bg-white h-screen">
+                <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                    <InputLabel id="demo-select-small-label">Age</InputLabel>
+                    <Select
+                        labelId="demo-select-small-label"
+                        id="demo-select-small"
+                        value={age}
+                        label="Age"
+                        onChange={handleChange}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                </FormControl>
+                <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                    <InputLabel id="demo-select-small-label">Age</InputLabel>
+                    <Select
+                        labelId="demo-select-small-label"
+                        id="demo-select-small"
+                        value={age}
+                        label="Age"
+                        onChange={handleChange}
+                    >
+                        <MenuItem value="">
+                            <em>None</em>
+                        </MenuItem>
+                        <MenuItem value={10}>Ten</MenuItem>
+                        <MenuItem value={20}>Twenty</MenuItem>
+                        <MenuItem value={30}>Thirty</MenuItem>
+                    </Select>
+                </FormControl>
+                <div class="flex flex-col justify-center items-center bg-white">
                     <h2>Race Positions</h2>
                     <div class="w-11/12">
                         <Line data={chartData} options={chartOptions} />
