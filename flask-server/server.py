@@ -73,7 +73,7 @@ def test(year):
 
 @app.route('/<int:year>/<int:race>/tires')
 def tireusage(year, race):
-    session = fastf1.get_session(year,  1, 'R')
+    session = fastf1.get_session(year,  race, 'R')
     session.load()
     laps = session.laps
     drivers = session.drivers

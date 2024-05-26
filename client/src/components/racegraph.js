@@ -4,6 +4,7 @@ import { Chart as ChartJS } from 'chart.js/auto'
 import { Chart } from 'react-chartjs-2'
 import zoomPlugin from 'chartjs-plugin-zoom';
 import Box from '@mui/material/Box';
+import { CircularProgress } from '@mui/material';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -17,9 +18,10 @@ function Racegraph({ year, session, selectedDrivers }) {
     const [data, setData] = useState({});
     const [raceData, setRaceData] = useState(new Map());
     const [loading, setLoading] = useState(true);
-
-
+    const [selectedSession, setSelectedSession] = useState('');
+    const [sessions, setSessions] = useState('');
     const [age, setAge] = React.useState('');
+    const [initialized, setInitialized] = useState(false);
 
     const handleChange = (event) => {
         setAge(event.target.value);
@@ -27,63 +29,116 @@ function Racegraph({ year, session, selectedDrivers }) {
     // const handleChange = (event) => {
     //     setSelectedYear(parseInt(event.target.value));
     // };
-    year = '2024'
-    session = '1'
-    const apiEndpoints = [
-        'http://ergast.com/api/f1/' + year + '/' + session + '/results.json',
-        'http://ergast.com/api/f1/' + year + '/' + session + '/laps.json?limit=2000',
-        'http://ergast.com/api/f1/' + year + '/' + session + '/pitstops.json?limit=2000',
-        'http://localhost:8000/' + year + '/' + session + '/tires'
-    ];
+
+    const [availableYear, setAvailableYear] = useState(2022);
+    const handleChangeAvailableYear = async (event) => {
+        const year = event.target.value;
+        setAvailableYear(year);
+        const fetchedSessions = await fetchSessions(year);
+        setSessions(fetchedSessions);
+        if (fetchedSessions.length > 0) {
+            setSelectedSession(fetchedSessions[0].session); // Select the first session by default
+        } else {
+            setSelectedSession(''); // Clear selected session if no sessions are available
+        }
+    };
+
+
+    const availableYears = [];
+    for (let i = 2018; i <= 2024; i++) {
+        availableYears.push(i);
+    }
+    const handleSessionChange = (event) => {
+        setSelectedSession(event.target.value);
+    };
+
+    const fetchSessions = async (year) => {
+        const response = await fetch(`http://ergast.com/api/f1/${year}.json?limit=1000`);
+        const data = await response.json();
+
+        const races = data.MRData.RaceTable.Races;
+
+        return races.map(race => ({
+            session: race.round,
+            raceName: race.raceName,
+        }));
+    };
+
+    const initializeSessions = async () => {
+        const fetchedSessions = await fetchSessions(availableYear);
+        setSessions(fetchedSessions);
+        if (fetchedSessions.length > 0) {
+            setSelectedSession(fetchedSessions[0].session); // Select the first session by default
+        }
+        setInitialized(true);
+    };
 
     useEffect(() => {
-        console.log("Before API's are done");
-        setLoading(true);
-        const apiPromises = apiEndpoints.map(async endpoint => {
-            try {
-                const response = await fetch(endpoint);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return await response.json();
-            } catch (error) {
-                console.error('Error fetching data:', error);
-                return null;
-            }
-        });
+        initializeSessions();
+    }, [availableYear]);
 
-        Promise.all(apiPromises)
-            .then(responses => {
-                // Process each response individually
-                responses.forEach((response, index) => {
-                    if (response) {
-                        switch (index) {
-                            case 0:
-                                processFirstAPIData(response);
-                                break;
-                            case 1:
-                                processSecondAPIData(response);
-                                break;
-                            case 2:
-                                processThirdAPIData(response);
-                                break;
-                            case 3:
-                                processFourthAPIData(response);
-                                break;
-                            default:
-                                break;
-                        }
+
+
+
+    useEffect(() => {
+        if (initialized && selectedSession) {
+            console.log("Before API's are done");
+            setLoading(true);
+
+            console.log(availableYear);
+            console.log(selectedSession);
+            const apiEndpoints = [
+                'http://ergast.com/api/f1/' + availableYear + '/' + selectedSession + '/results.json',
+                'http://ergast.com/api/f1/' + availableYear + '/' + selectedSession + '/laps.json?limit=2000',
+                'http://ergast.com/api/f1/' + availableYear + '/' + selectedSession + '/pitstops.json?limit=2000',
+                'http://localhost:8000/' + availableYear + '/' + selectedSession + '/tires'
+            ];
+            const apiPromises = apiEndpoints.map(async endpoint => {
+                try {
+                    const response = await fetch(endpoint);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
                     }
-                });
-
-                setLoading(false);
-                console.log("After API's are done");
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                // Handle errors if necessary
+                    return await response.json();
+                } catch (error) {
+                    console.error('Error fetching data:', error);
+                    return null;
+                }
             });
-    }, [selectedDrivers]); // Run effect whenever selectedYear changes
+
+            Promise.all(apiPromises)
+                .then(responses => {
+                    // Process each response individually
+                    responses.forEach((response, index) => {
+                        if (response) {
+                            switch (index) {
+                                case 0:
+                                    processFirstAPIData(response);
+                                    break;
+                                case 1:
+                                    processSecondAPIData(response);
+                                    break;
+                                case 2:
+                                    processThirdAPIData(response);
+                                    break;
+                                case 3:
+                                    processFourthAPIData(response);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    });
+
+                    setLoading(false);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    // Handle errors if necessary
+                });
+            renderGraph();
+        }
+    }, [availableYear, selectedSession]); // Run effect whenever selectedYear changes
 
     const processFirstAPIData = (data) => {
         data.MRData.RaceTable.Races[0].Results.forEach(driver => {
@@ -108,7 +163,6 @@ function Racegraph({ year, session, selectedDrivers }) {
             }
         });
     };
-
     const processSecondAPIData = (data) => {
         data.MRData.RaceTable.Races[0].Laps.forEach((lap) => {
             lap.Timings.forEach((timing) => {
@@ -129,7 +183,6 @@ function Racegraph({ year, session, selectedDrivers }) {
             });
         });
     };
-
     const processThirdAPIData = (data) => {
         data.MRData.RaceTable.Races[0].PitStops.forEach((pitstop) => {
             if (true) {
@@ -146,7 +199,6 @@ function Racegraph({ year, session, selectedDrivers }) {
             }
         });
     };
-
     const processFourthAPIData = (data) => {
         for (const key in data) {
             if (data.hasOwnProperty(key)) {
@@ -166,6 +218,10 @@ function Racegraph({ year, session, selectedDrivers }) {
     const softCompound = compoundSymbol('S', 'red');
     const mediumCompound = compoundSymbol('M', 'yellow');
     const hardCompound = compoundSymbol('H', 'white');
+    const ultrasoftCompound = compoundSymbol('US', 'red');
+    const supersoftCompound = compoundSymbol('SS', 'rgba(128, 0, 128, 1)');
+    const wetCompound = compoundSymbol('W', 'rgba(54, 162, 235, 1)');
+    const intermediateCompound = compoundSymbol('I', 'rgba(75, 192, 192, 1)')
     // 'WET': 'rgba(54, 162, 235, 1)',//blue
     // 'SOFT': 'rgba(255, 99, 132, 1)', // Red
     // 'MEDIUM': 'rgba(255, 206, 86, 1)', // Yellow
@@ -173,8 +229,6 @@ function Racegraph({ year, session, selectedDrivers }) {
     // 'INTERMEDIATE': 'rgba(75, 192, 192, 1)', // Green
     // 'SUPERSOFT': 'rgba(128, 0, 128, 1)', // Purple
     const driverIdToColorMap = {};
-
-    const driverColors = {};
     var mechanicalList = [
         "Mechanical",
         "Tyre",
@@ -206,9 +260,10 @@ function Racegraph({ year, session, selectedDrivers }) {
             if (compound === 'SOFT') return softCompound;
             if (compound === 'MEDIUM') return mediumCompound;
             if (compound === 'HARD') return hardCompound;
-            if (compound === 'SOFT') return softCompound;
-            if (compound === 'MEDIUM') return mediumCompound;
-            if (compound === 'HARD') return hardCompound;
+            if (compound === 'ULTRASOFT') return ultrasoftCompound;
+            if (compound === 'SUPERSOFT') return supersoftCompound;
+            if (compound === 'WET') return wetCompound;
+            if (compound === 'INTERMEDIATE') return intermediateCompound;
         }
 
         pointStyleDriver[0] = compoundd(driverData.compounds[0]);
@@ -261,6 +316,15 @@ function Racegraph({ year, session, selectedDrivers }) {
     };
 
     const renderGraph = () => {
+        if (loading || raceData.size === 0) {
+            return (
+                <div className="flex justify-center items-center h-screen">
+                    <div>
+                        <CircularProgress color="inherit" size={70} />
+                    </div>
+                </div>
+            );
+        }
         // const distinctColors = [
         //     '#8b008b', "#ff4500", "#ffa500", "#949416", "#8a2be2",
         //     "#dc143c", "#556b2f", "#8b4513", "#708090", "#483d8b",
@@ -345,11 +409,29 @@ function Racegraph({ year, session, selectedDrivers }) {
         const chartOptions = {
             plugins: {
                 title: {
-                    display: true,
+                    display: false,
                     text: '2021 First Grand Prix'
                 },
                 legend: {
                     display: false,
+                },
+                tooltip: {
+                    callbacks: {
+                        title: (tooltipItem, data) => {
+                            const driverIndex = tooltipItem[0].datasetIndex;
+                            const lap = tooltipItem[0].dataIndex;
+                            const driverName = driverNames[driverIndex];
+                            const position = tooltipItem[0].raw;
+                            return `${driverName}\nLap: ${lap}\nPosition: ${position}`;
+                        },
+                        label: (tooltipItem) => {
+                            const driverIndex = tooltipItem.datasetIndex;
+                            const lap = tooltipItem.dataIndex;
+                            const driverName = driverNames[driverIndex];
+                            const position = tooltipItem.raw;
+                            return ``;
+                        },
+                    },
                 },
                 zoom: {
                     pan: {
@@ -452,48 +534,11 @@ function Racegraph({ year, session, selectedDrivers }) {
         };
 
         return (
-            <div>
-                <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                    <InputLabel id="demo-select-small-label">Age</InputLabel>
-                    <Select
-                        labelId="demo-select-small-label"
-                        id="demo-select-small"
-                        value={age}
-                        label="Age"
-                        onChange={handleChange}
-                    >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
-                </FormControl>
-                <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                    <InputLabel id="demo-select-small-label">Age</InputLabel>
-                    <Select
-                        labelId="demo-select-small-label"
-                        id="demo-select-small"
-                        value={age}
-                        label="Age"
-                        onChange={handleChange}
-                    >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
-                </FormControl>
-                <div class="flex flex-col justify-center items-center bg-white">
-                    <h2>Race Positions</h2>
-                    <div class="w-11/12">
-                        <Line data={chartData} options={chartOptions} />
-                    </div>
-
+            <div class="flex flex-col justify-center items-center">
+                <div class="w-11/12">
+                    <Line data={chartData} options={chartOptions} />
                 </div>
+
             </div>
 
 
@@ -501,21 +546,47 @@ function Racegraph({ year, session, selectedDrivers }) {
     };
 
     return (
-        <div>
-            {/* <label htmlFor="yearSelect">Select a year:</label> */}
-            {/* <select id="yearSelect" value={selectedYear} onChange={handleChange}>
-                {Array.from({ length: 2024 - 1950 + 1 }, (_, index) => 1950 + index).map((year) => (
-                    <option key={year} value={year}>
-                        {year}
-                    </option>
-                ))}
-            </select> */}
-            {/* {loading ? (
-                <p>Loading...</p>
-            ) : ( */}
+        <div class="h-screen">
+            <div class='flex justify-center items-center pt-2'>
+                <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                    <InputLabel id="available-year-select-label">Year</InputLabel>
+                    <Select
+                        labelId="available-year-select-label"
+                        id="available-year-select"
+                        value={availableYear}
+                        label="Year"
+                        onChange={handleChangeAvailableYear}
+                    >
+                        {availableYears.map((year) => (
+                            <MenuItem key={year} value={year}>
+                                {year}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+                {sessions.length > 0 && (
+                    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                        <InputLabel id="session-select-label">Session</InputLabel>
+                        <Select
+                            labelId="session-select-label"
+                            id="session-select"
+                            value={selectedSession}
+                            label="Session"
+                            onChange={handleSessionChange}
+                        >
+                            {sessions.map((session) => (
+                                <MenuItem key={session.session} value={session.session}>
+                                    {session.raceName}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
+                )}
+
+            </div>
             {renderGraph()}
-            {/* )} */}
         </div>
+
     );
 }
 
