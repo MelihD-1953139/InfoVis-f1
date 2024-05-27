@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import DriverCompare from './components/DriverCompare';
 import Standings from './components/Standings';
 import Racegraph from './components/racegraph';
-
+import Season
+    from './components/Season';
 function App() {
     const [activeTab, setActiveTab] = useState('Standings');
 
@@ -25,6 +26,13 @@ function App() {
                         </button>
                         <button
                             type="button"
+                            className={`btn btn-outline-dark mx-2 ${activeTab === 'Season' && 'btn-dark text-white'}`}
+                            onClick={() => handleTabClick('Season')}
+                        >
+                            Season
+                        </button>
+                        <button
+                            type="button"
                             className={`btn btn-outline-dark mx-2 ${activeTab === 'Race' && 'btn-dark text-white'}`}
                             onClick={() => handleTabClick('Race')}
                         >
@@ -42,6 +50,7 @@ function App() {
             </div>
             {activeTab === 'Standings' && <Standings />}
             {activeTab === 'Race' && <Racegraph />}
+            {activeTab === 'Season' && <Season />}
             {activeTab === 'DriverCompare' && <DriverCompare />}
         </div>
 
