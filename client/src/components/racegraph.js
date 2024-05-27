@@ -87,6 +87,7 @@ function Racegraph({ year, session, selectedDrivers }) {
 
             console.log(availableYear);
             console.log(selectedSession);
+            // setRaceData(new Map());
             const apiEndpoints = [
                 'http://ergast.com/api/f1/' + availableYear + '/' + selectedSession + '/results.json',
                 'http://ergast.com/api/f1/' + availableYear + '/' + selectedSession + '/laps.json?limit=2000',
@@ -141,6 +142,7 @@ function Racegraph({ year, session, selectedDrivers }) {
     }, [availableYear, selectedSession]); // Run effect whenever selectedYear changes
 
     const processFirstAPIData = (data) => {
+        raceData.clear();
         data.MRData.RaceTable.Races[0].Results.forEach(driver => {
             if (true) {
                 console.log("been here");
@@ -228,7 +230,7 @@ function Racegraph({ year, session, selectedDrivers }) {
     // 'HARD': 'rgb(255,255,255, 1)', // white
     // 'INTERMEDIATE': 'rgba(75, 192, 192, 1)', // Green
     // 'SUPERSOFT': 'rgba(128, 0, 128, 1)', // Purple
-    const driverIdToColorMap = {};
+    var driverIdToColorMap = {};
     var mechanicalList = [
         "Mechanical",
         "Tyre",
@@ -367,6 +369,7 @@ function Racegraph({ year, session, selectedDrivers }) {
 
         // Step 1: Create a mapping of driver names to colors
         const driverNameToColor = {};
+        driverIdToColorMap = {};
         driverIds.forEach(driverId => {
             const driverInfo = raceData.get(driverId);
             if (driverInfo) {
@@ -501,9 +504,10 @@ function Racegraph({ year, session, selectedDrivers }) {
                 y: {
                     min: 0,
                     max: maxLatestPlace + 1,
-                    type: 'linear',
+                    // type: 'linear',
                     ticks: {
                         callback: function (value, index, values) {
+                            console.log(values);
                             if (value >= 1 && value <= maxLatestPlace) {
                                 return gridPositions[value];;
                             } else {

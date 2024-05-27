@@ -161,7 +161,6 @@ const Season = () => {
                 pointStyle: pointStyleDriver, // Assign pointStyle to dataset
             };
         });
-
         return { labels, datasets };
     };
 
@@ -179,13 +178,15 @@ const Season = () => {
                         const raceIndex = tooltipItems[0].dataIndex;
                         return sessions[raceIndex]?.raceName ?? '';
                     },
-                    label: (tooltipItem, data) => {
+                    label: (tooltipItem) => {
                         const driverIndex = tooltipItem.datasetIndex;
                         const raceIndex = tooltipItem.dataIndex;
-                        const driverName = data.datasets[driverIndex].label;
-                        const position = cumulativePoints[driverName]?.positions[raceIndex];
-                        const points = cumulativePoints[driverName]?.points[raceIndex];
-                        return [driverName, `Position: ${position}`, `Points: ${points}`];
+                        console.log(tooltipItem);
+                        // const driverName = data.datasets[driverIndex].label;
+                        // const position = cumulativePoints[driverName]?.positions[raceIndex];
+                        // const points = cumulativePoints[driverName]?.points[raceIndex];
+                        return ''
+                        // return [driverName, `Position: ${position}`, `Points: ${points}`];
                     },
                 },
             },
@@ -193,10 +194,10 @@ const Season = () => {
                 pan: {
                     enabled: true,
                     modifierKey: 'shift',
-                    mode: 'x'
+                    mode: 'xy'
                 },
                 zoom: {
-                    mode: 'x',
+                    mode: 'xy',
                     wheel: {
                         enabled: true,
                         speed: 0.07,
@@ -229,9 +230,6 @@ const Season = () => {
         responsive: true,
         scales: {
             x: {
-                type: 'linear',
-                min: -1,
-                max: sessions.length + 1,
                 ticks: {
                     callback: function (value, index, values) {
                         if (Number.isInteger(value) && value >= 0 && value <= sessions.length) {
@@ -240,23 +238,23 @@ const Season = () => {
                             return '';
                         }
                     },
+
                     stepSize: 1,
                     autoSkip: false,
                     color: 'grey'
                 },
                 grid: {
                     // offset: true,
-                    display: true,
+                    display: false,
                     color: 'grey'
                 },
                 border: {
-                    display: false,
+                    display: true,
                     // dashOffset: 2.0
                 }
             },
             y: {
                 min: -1,
-                type: 'linear',
                 ticks: {
                     callback: function (value, index, values) {
                         if (Number.isInteger(value) && value >= 0) {
@@ -304,32 +302,35 @@ const Season = () => {
                     </Select>
                 </FormControl>
             </div>
-            <div>
-                {loading ? (
-                    <div className="flex justify-center items-center h-screen">
-                        <CircularProgress color="inherit" size={70} />
-                    </div>
-                ) : (
-                    <>
-                        <div class='w-3/4'>
+            {loading ? (
+                <div className="flex justify-center items-center h-screen">
+                    <CircularProgress color="inherit" size={70} />
+                </div>
+            ) : (
+                <>
+                    <div className='flex justify-center items-center'>
+                        <div className='h-5/6 w-10/12'>
                             <Line data={getLineChartData()} options={chartOptions} />
-                            {sessions.map((session) => (
-                                <div key={session.round}>
-                                    <h3>{session.raceName}</h3>
-                                    <ul>
-                                        {raceResults[session.round]?.map((result, index) => (
-                                            <li key={index}>
-                                                {result.position}: {result.driverName} ({result.constructorName}) - {result.points} points
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
                         </div>
+                    </div>
 
-                    </>
-                )}
-            </div>
+                    {/* <div>
+                        {sessions.map((session) => (
+                            <div key={session.round}>
+                                <h3>{session.raceName}</h3>
+                                <ul>
+                                    {raceResults[session.round]?.map((result, index) => (
+                                        <li key={index}>
+                                            {result.position}: {result.driverName} ({result.constructorName}) - {result.points} points
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div> */}
+
+                </>
+            )}
         </div>
     );
 };
