@@ -46,6 +46,7 @@ const Season = () => {
     const [raceResults, setRaceResults] = useState({});
     const [cumulativePoints, setCumulativePoints] = useState({});
     const [loading, setLoading] = useState(false);
+    const [driverColors, setDriverColors] = useState({});
 
     const availableYears = [];
     for (let i = lowestYear; i <= highestYear; i++) {
@@ -60,6 +61,13 @@ const Season = () => {
         setSessions(fetchedSessions);
         await fetchAllRaceResults(year, fetchedSessions);
         setLoading(false);
+    };
+
+
+    const fetchColorsDriver = async (year, fetchedSessions) => {
+        const response = await fetch(`http://localhost:8000/${year}/${fetchedSessions.length}/driverscolor`);
+        const data = await response.json();
+        setDriverColors(data);
     };
 
     const fetchAllRaceResults = async (year, sessions) => {
@@ -100,6 +108,7 @@ const Season = () => {
         const fetchedSessions = await fetchSessions(availableYear);
         setSessions(fetchedSessions);
         await fetchAllRaceResults(availableYear, fetchedSessions);
+        await fetchColorsDriver(availableYear, fetchedSessions);
         setLoading(false);
     };
 
@@ -116,6 +125,29 @@ const Season = () => {
     };
 
     const getLineChartData = () => {
+        function darkenColor(hex, amount) {
+            let usePound = false;
+
+            if (hex[0] == "#") {
+                hex = hex.slice(1);
+                usePound = true;
+            }
+
+            let num = parseInt(hex, 16);
+
+            let r = (num >> 16) - amount;
+            let g = (num >> 8 & 0x00FF) - amount;
+            let b = (num & 0x0000FF) - amount;
+
+            r = r < 0 ? 0 : r;
+            g = g < 0 ? 0 : g;
+            b = b < 0 ? 0 : b;
+
+            return (usePound ? "#" : "") + (r << 16 | g << 8 | b).toString(16).padStart(6, '0');
+        }
+
+
+
         const labels = sessions.map(session => session.raceName);
         const winSymbol = compoundSymbol('W', 'green'); // First place symbol
         const firstPlaceSymbol = compoundSymbol('1', 'gold'); // First place symbol
@@ -152,12 +184,18 @@ const Season = () => {
                     pointStyleDriver[lastRaceIndex] = thirdPlaceSymbol;
                 }
             }
+            // Darkening amount (adjust this value as needed)
+            const darkenAmount = 40;
+            var bColor = '#' + Math.floor(Math.random() * 16777215).toString(16)
+            if (driverColors[driver]) {
+                bColor = darkenColor('#' + driverColors[driver], darkenAmount);
+            }
 
             return {
                 label: driver,
                 data: driverData.points,
                 fill: false,
-                borderColor: '#' + Math.floor(Math.random() * 16777215).toString(16),
+                borderColor: bColor,
                 pointStyle: pointStyleDriver, // Assign pointStyle to dataset
             };
         });
@@ -174,19 +212,16 @@ const Season = () => {
             },
             tooltip: {
                 callbacks: {
-                    title: (tooltipItems, data) => {
+                    title: (tooltipItems) => {
+                        const driverName = tooltipItems[0].dataset.label;
                         const raceIndex = tooltipItems[0].dataIndex;
-                        return sessions[raceIndex]?.raceName ?? '';
+                        const grandPrix = tooltipItems[0].label;
+                        const pointsCumilative = tooltipItems[0].dataset.data;
+                        let result = raceResults[raceIndex + 1].find(driver => driver.driverName === driverName);
+                        return `${grandPrix}\n${driverName} (${result.constructorName})\nPoints: ${pointsCumilative[raceIndex]}\nP${result.position}, +${result.points}`;
                     },
                     label: (tooltipItem) => {
-                        const driverIndex = tooltipItem.datasetIndex;
-                        const raceIndex = tooltipItem.dataIndex;
-                        console.log(tooltipItem);
-                        // const driverName = data.datasets[driverIndex].label;
-                        // const position = cumulativePoints[driverName]?.positions[raceIndex];
-                        // const points = cumulativePoints[driverName]?.points[raceIndex];
                         return ''
-                        // return [driverName, `Position: ${position}`, `Points: ${points}`];
                     },
                 },
             },
@@ -230,23 +265,25 @@ const Season = () => {
         responsive: true,
         scales: {
             x: {
+                offset: true,
                 ticks: {
                     callback: function (value, index, values) {
                         if (Number.isInteger(value) && value >= 0 && value <= sessions.length) {
-                            return value;
+                            let raceName = sessions[index]?.raceName ?? value;
+                            return raceName.replace(/Grand Prix/i, '').trim();
                         } else {
                             return '';
                         }
                     },
 
+
                     stepSize: 1,
                     autoSkip: false,
-                    color: 'grey'
+                    color: 'black'
                 },
                 grid: {
                     // offset: true,
-                    display: false,
-                    color: 'grey'
+                    display: true,
                 },
                 border: {
                     display: true,
@@ -266,6 +303,7 @@ const Season = () => {
                     // stepSize: 1,
                     // autoSkip: false,
                     // color: 'grey'
+                    color: 'black'
                 },
                 grid: {
                     display: true,
@@ -309,7 +347,7 @@ const Season = () => {
             ) : (
                 <>
                     <div className='flex justify-center items-center'>
-                        <div className='h-5/6 w-10/12'>
+                        <div className='h-5/6 w-11/12'>
                             <Line data={getLineChartData()} options={chartOptions} />
                         </div>
                     </div>
@@ -331,6 +369,9 @@ const Season = () => {
 
                 </>
             )}
+            <div className='flex justify-center items-center bg-white p-5'>
+                <p class='text-black'>Made by Melih</p>
+            </div>
         </div>
     );
 };

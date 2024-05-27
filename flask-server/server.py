@@ -94,5 +94,13 @@ def tireusage(year, race):
 
     return json_data
 
+@app.route('/<int:year>/<int:race>/driverscolor')
+def driverscolor(year, race):
+    session = fastf1.get_session(year,  race, 'R')
+    session.load()
+    drivers = session.drivers
+    driversWithTheirTeamColor = {session.get_driver(driver)["FullName"]: session.get_driver(driver)["TeamColor"] for driver in drivers}
+    return driversWithTheirTeamColor
+
 if __name__ == '__main__':
     app.run(port=8000,debug=True)

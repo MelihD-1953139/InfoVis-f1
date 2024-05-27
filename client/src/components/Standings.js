@@ -526,6 +526,9 @@ const Standings = () => {
                     </Table>
                 </TableContainer>
             </div>
+            <div className='flex justify-center items-center bg-white p-5'>
+                <p class='text-lg'>Made by Melih</p>
+            </div>
         </div >
     );
 };
