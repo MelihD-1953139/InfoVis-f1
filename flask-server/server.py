@@ -99,6 +99,7 @@ def driverscolor(year, race):
     session = fastf1.get_session(year,  race, 'R')
     session.load()
     drivers = session.drivers
+    print(session.get_driver(drivers[0]))
     driversWithTheirTeamColor = {session.get_driver(driver)["FullName"]: session.get_driver(driver)["TeamColor"] for driver in drivers}
     return driversWithTheirTeamColor
 
