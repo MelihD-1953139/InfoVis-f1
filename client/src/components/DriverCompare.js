@@ -5,7 +5,7 @@ import "./DriverCompare.css"; // Import CSS file for styling
 import Racegraph from "./racegraph";
 
 function DriverCompare() {
-    
+
     const [year, setYear] = useState(1996);
     const [circuit, setCircuit] = useState("select circuit");
     const [round, setRound] = useState(1);

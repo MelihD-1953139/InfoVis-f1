@@ -7,6 +7,7 @@ import fastf1
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import timedelta
+import fastf1.plotting as f1plot
 app = Flask(__name__)
 CORS(app)
 
@@ -121,12 +122,12 @@ def test(year):
 
 @app.route('/<int:year>/<int:race>/tires')
 def tireusage(year, race):
-    session = fastf1.get_session(2021, 1, 'R')
+    session = fastf1.get_session(year,  race, 'R')
     session.load()
     laps = session.laps
     drivers = session.drivers
     driversWithTheirCodes = {session.get_driver(driver)["Abbreviation"]: session.get_driver(driver)["DriverId"] for driver in drivers}
-
+    driverWithColors = {session.get_driver(driver)["Abbreviation"]: session.get_driver(driver)["TeamColor"] for driver in drivers}
     stints = laps[["Driver", "Stint", "Compound", "LapNumber"]]
     stints = stints.groupby(["Driver", "Stint", "Compound"])
     stints = stints.count().reset_index()
@@ -135,13 +136,21 @@ def tireusage(year, race):
     # Grouping by Driver and creating lists of compounds and stint lengths
     driver_data = stints.groupby('Driver').apply(lambda x: {
         'compound': x['Compound'].tolist(),
-        'stintlength': x['StintLength'].tolist()
+        'stintlength': x['StintLength'].tolist(),
     }).to_dict()
-
     # Converting to the desired JSON format
-    json_data = {driversWithTheirCodes[driver]: {'code': driver, 'compound': data['compound'], 'stintlength': data['stintlength']} for driver, data in driver_data.items()}
+    json_data = {driversWithTheirCodes[driver]: {'code': driver, 'color': '#'+driverWithColors[driver],'compound': data['compound'], 'stintlength': data['stintlength']} for driver, data in driver_data.items()}
 
     return json_data
+
+@app.route('/<int:year>/<int:race>/driverscolor')
+def driverscolor(year, race):
+    session = fastf1.get_session(year,  race, 'R')
+    session.load()
+    drivers = session.drivers
+    print(session.get_driver(drivers[0]))
+    driversWithTheirTeamColor = {session.get_driver(driver)["FullName"]: session.get_driver(driver)["TeamColor"] for driver in drivers}
+    return driversWithTheirTeamColor
 
 if __name__ == '__main__':
     app.run(port=8000,debug=True)

@@ -31,6 +31,13 @@ function compoundSymbol(label, outlineColor) {
     else {
         f = "bold 9px Tahoma";
     }
+    if (outlineColor === 'gold')
+        outlineColor = 'rgb(255,215,0)'
+    if (outlineColor === 'silver')
+        outlineColor = 'rgb(192,192,192)'
+    if (outlineColor === 'bronz')
+        outlineColor = 'rgb(193,183,172)'
+
     ctx.font = f;
     ctx.fillStyle = "white";
     ctx.textAlign = "center";
