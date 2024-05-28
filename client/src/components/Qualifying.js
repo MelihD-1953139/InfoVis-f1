@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import SelectRace from "./SelectRace";
-import LapGraph from "./LapGraph";
-import "./DriverCompare.css"; // Import CSS file for styling
-import Racegraph from "./racegraph";
+import { useEffect, useState } from "react";
+import SelectQuali from "./SelectQuali";
+import QualiView from "./QualiView";
 
-function DriverCompare() {
-    
+function Qualifying() {
     const [year, setYear] = useState(1996);
     const [circuit, setCircuit] = useState("select circuit");
     const [round, setRound] = useState(1);
@@ -13,10 +10,11 @@ function DriverCompare() {
     const [drivercodes, setDriverCodes] = useState([]);
     const [driverData, setDriverData] = useState([{}]);
     const [fastestLaps, setFastestLaps] = useState([{}]);
+    const [driverColors, setDriverColors] = useState({});
 
     return (
         <div className="comparecontainer"> {/* Use className for styling */}
-            <SelectRace 
+            <SelectQuali 
                 year={year}
                 setYear={setYear}
                 circuit={circuit}
@@ -28,21 +26,22 @@ function DriverCompare() {
                 drivercodes={drivercodes}
                 setDriverCodes={setDriverCodes}
                 driverData={driverData}
-                fastestLaps={fastestLaps}
-            />
-            <LapGraph 
-                year={year}
-                session={round}
-                selectedDrivers={selectedDrivers}
-                drivercodes={drivercodes}
-                driverData={driverData}
                 setDriverData={setDriverData}
+                fastestLaps={fastestLaps}
+                setDriverColors={setDriverColors}
+            />
+            <QualiView 
+                year={year}
+                circuitId={circuit}
+                session={round}
+                SelectedDrivers={selectedDrivers}
                 setFastestLaps={setFastestLaps}
-                circuitID={circuit}
+                DriverCodes={drivercodes}
+                DriverColors={driverColors}
             />
         </div>
-    );
 
+    );
 }
 
-export default DriverCompare;
+export default Qualifying;

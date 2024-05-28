@@ -4,8 +4,55 @@ from flask_cors import CORS
 from io import StringIO
 import pandas as pd
 import fastf1
+import numpy as np
+import matplotlib.pyplot as plt
+from datetime import timedelta
 app = Flask(__name__)
 CORS(app)
+
+def convert_timedelta64(arr):
+    # Convert numpy timedelta64 array to integers (seconds in this example)
+    return [int(td64 / np.timedelta64(1, 's')) for td64 in arr]
+
+
+@app.route("/qualifying")
+def qualifying():
+    year = request.args.get('year')
+    round_number = request.args.get('round')
+    session = fastf1.get_session(int(year), int(round_number), "Q")
+    session.load()
+    df = session.laps
+    print(df)
+    df = df.to_json()
+    return df
+
+
+@app.route("/qualifyingspeed")
+def qualifying_speed():
+    year = request.args.get('year')
+    round_number = request.args.get('round')
+    drivers = request.args.get('drivers')  
+
+    drivers = drivers.split(",")
+    session = fastf1.get_session(int(year), int(round_number), "Q")
+    session.load()
+    data = {}
+
+    for driver in drivers:
+        fast_data = session.laps.pick_driver(driver).pick_fastest()
+        fast_car_data = fast_data.get_car_data()
+        t = fast_car_data['Time']
+        vCar = fast_car_data['Speed']
+
+        data[driver] = {'Time': t, 'Speed': vCar}
+
+        data[driver]['Speed'] = data[driver]['Speed'].tolist()
+        data[driver]["Time"] = data[driver]['Time'].tolist()
+        data[driver]["Time"] = [td.total_seconds() for td in data[driver]['Time']]
+
+    print(data)
+    
+    return jsonify(data)
 
 
 @app.route('/tyres')
@@ -33,21 +80,23 @@ def tyres():
 
 @app.route('/driverinfo')
 def driverinfo():
+    year = request.args.get('year')
+    round_number = request.args.get('round')
     drivers = request.args.get('drivers')
 
     drivers = drivers.split(",")
 
+    session = fastf1.get_session(int(year), int(round_number), "R")
+    session.load()
+
     all_driver_info = {}
 
     for driver in drivers:
-        color = fastf1.ff1.plotting.driver_color(driver)
-        print(color)
-        driver_info = {
-            "color": color
-        }
+        info = session.get_driver(driver)
+        all_driver_info[driver] = info.to_json()
 
-
-    return all_driver_info
+    print(all_driver_info)
+    return jsonify(all_driver_info)
 
 # Route
 @app.route('/year/<int:year>')

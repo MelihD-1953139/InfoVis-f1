@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-function SelectRace({year, setYear, circuit, setCircuit, round, setRound, selectedDrivers, setSelectedDrivers, drivercodes, setDriverCodes, driverData, fastestLaps}) {
+function SelectQuali({year, setYear, circuit, setCircuit, round, setRound, selectedDrivers, setSelectedDrivers, drivercodes, setDriverCodes, driverData, setDriverData, fastestLaps, setDriverColors}) {
     const [data, setData] = useState([{}]);
+    const [positions, setPositions] = useState([{}]);
 
     const years = Array.from({ length: 29 }, (_, index) => 1996 + index);
 
@@ -20,6 +21,55 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
         }
     };
 
+    function fetchPositions(year, round) {
+        fetch("https://ergast.com/api/f1/" + year + "/" + round + "/qualifying.json").then(res => {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return res.json();
+        }).then(data => {
+            let positionst = {};
+            selectedDrivers.forEach(driver => {
+                for (let i = 0; i < data.MRData.RaceTable.Races[0].QualifyingResults.length; i++) {
+                    if (driver === data.MRData.RaceTable.Races[0].QualifyingResults[i].Driver.driverId) {
+                        positionst[driver] = data.MRData.RaceTable.Races[0].QualifyingResults[i].position;
+                    }
+                }
+            });
+            setPositions(positionst);
+            console.log(positionst);
+            
+        }).catch(error => {
+            console.error('Error fetching data:', error);
+        });
+    }
+
+    const fetchDriverData = (year, round) => {
+        if (drivercodes.length === 0) {
+            return;
+        }
+        fetch("http://localhost:8000/driverinfo?year=" + year + "&round=" + round + "&drivers=" + drivercodes.join(","))
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                setDriverData(data);
+                console.log(data);
+                let colors = {};
+                drivercodes.forEach(driver => {
+                    if (data[driver] !== undefined && isValidJSON(data[driver])) {
+                        let driverinfo = JSON.parse(data[driver]);
+                        colors[driver] = driverinfo["TeamColor"];
+                    }
+                        
+                });
+                setDriverColors(colors);
+            })
+    }
+
 
     const fetchData = () => {
         let driverselect = document.getElementById("drivers");
@@ -30,7 +80,7 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
         drivercodes = [];
         setSelectedDrivers([]);
         setDriverCodes([]);
-        fetch("https://ergast.com/api/f1/" + year + "/" + round + "/results.json")
+        fetch("https://ergast.com/api/f1/" + year + "/" + round + "/qualifying.json")
             .then(res => {
                 if (!res.ok) {
                     throw new Error('Network response was not ok');
@@ -40,10 +90,10 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
             .then(data => {
                 setData(data);
                 // add a selection to choose a driver from this race
-                for (let i = 0; i < data.MRData.RaceTable.Races[0].Results.length; i++) {
+                for (let i = 0; i < data.MRData.RaceTable.Races[0].QualifyingResults.length; i++) {
                     let option = document.createElement("option");
-                    option.text = data.MRData.RaceTable.Races[0].Results[i].Driver.driverId
-                    option.value = [data.MRData.RaceTable.Races[0].Results[i].Driver.driverId, data.MRData.RaceTable.Races[0].Results[i].Driver.code];
+                    option.text = data.MRData.RaceTable.Races[0].QualifyingResults[i].Driver.driverId
+                    option.value = [data.MRData.RaceTable.Races[0].QualifyingResults[i].Driver.driverId, data.MRData.RaceTable.Races[0].QualifyingResults[i].Driver.code];
                     driverselect.add(option);
                 }
             })
@@ -149,8 +199,12 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
     
             // Create an image element for the driver's picture
             let driverimage = document.createElement("img");
-            if (info && info[drivercodes[i]]) {
+
+            console.log(info);
+
+            if (info && info[drivercodes[i]] !== undefined && isValidJSON(info[drivercodes[i]])) {
                 let driverinfo = info[drivercodes[i]];
+
                 driverinfo = JSON.parse(driverinfo);
                 driverimage.src = driverinfo["HeadshotUrl"];
                 
@@ -217,11 +271,11 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
                     let slowest = true;
                     for (let j = 0; j < drivers.length; j++) {
                         // check if valid json
-                        if (isValidJSON(info[drivercodes[j]]) && Number.isInteger(driverinfo["Position"]) && Number.isInteger(JSON.parse(info[drivercodes[j]])["Position"])){
-                            if (driverinfo["Position"] > JSON.parse(info[drivercodes[j]])["Position"]) {
+                        if (parseInt(positions[selectedDrivers[j]])){
+                            if (parseInt(positions[selectedDrivers[i]]) > parseInt(positions[selectedDrivers[j]])) {
                                 fastest = false;
                             } 
-                            if (driverinfo["Position"] < JSON.parse(info[drivercodes[j]])["Position"]) {
+                            if (parseInt(positions[selectedDrivers[i]]) < parseInt(positions[selectedDrivers[j]])) {
                                 slowest = false;
                             }
                         }
@@ -232,39 +286,8 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
                         classname = "slowest";
                     }
                 }   
-                createStatRow("Position", driverinfo["Position"], classname);
+                createStatRow("Position", positions[selectedDrivers[i]], classname);
                 
-                if (fastestLaps[selectedDrivers[i]]) {
-                    let classname = "";
-                    // check if the driver has the fastest lap between all selected drivers
-                    if (selectedDrivers.length > 1) {
-                        let fastest = true;
-                        let slowest = true;
-                        for (let j = 0; j < selectedDrivers.length; j++) {
-                            if (fastestLaps[selectedDrivers[j]] < fastestLaps[selectedDrivers[i]]) {
-                                fastest = false;
-                                break;
-                            } 
-                        }
-                        for (let j = 0; j < selectedDrivers.length; j++) {
-                            if (fastestLaps[selectedDrivers[j]] > fastestLaps[selectedDrivers[i]]) {
-                                slowest = false;
-                                break;
-                            }
-                        }
-                        if (slowest) {
-                            classname = "slowest";
-                        } else if (fastest) {
-                            classname = "fastest";
-                        }
-                    }
-                    createStatRow("Fastest Lap", SecondsToMinuteString(fastestLaps[selectedDrivers[i]]), classname);
-                    
-
-                }
-                createStatRow("Start Position", driverinfo["GridPosition"]);
-                createStatRow("End Position", driverinfo["ClassifiedPosition"]);
-                createStatRow("Points", driverinfo["Points"]);
     
                 // Append stats to driver div
                 driver.appendChild(stats);
@@ -297,11 +320,17 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
         }
     }
     
-    
     useEffect(() => {
         renderDriverList(selectedDrivers, driverData);
-        
+    }, [positions, driverData]);
+    
+    useEffect(() => {
+        fetchPositions(year, round);
     }, [driverData]);
+
+    useEffect(() => {
+        fetchDriverData(year, round);
+    }, [drivercodes]);
 
     return (
         <div id="drivercompare">
@@ -332,4 +361,4 @@ function SelectRace({year, setYear, circuit, setCircuit, round, setRound, select
     );
 }
 
-export default SelectRace;
+export default SelectQuali;
