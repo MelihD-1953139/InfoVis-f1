@@ -392,8 +392,11 @@ function QualiView({SelectedDrivers, DriverCodes, year, circuitId, session, setF
 
     useEffect(() => {
         loadCircuit(circuitId);
-        loadQualiSession();
     }, [circuitId]);
+
+    useEffect(() => {
+        loadQualiSession();
+    }, [year, session]);
 
     useEffect(() => {
         fillGrid();
