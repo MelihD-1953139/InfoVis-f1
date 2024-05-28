@@ -589,6 +589,13 @@ function Racegraph({ year, session, selectedDrivers }) {
 
             </div>
             {renderGraph()}
+            <div className="flex justify-center items-center bg-white space-x-4">
+                <span>P: Pitstop</span>
+                <span>X: Accident/Collision</span>
+                <span>M: Mechanical</span>
+                <span>R: Retired</span>
+                <span>D: Disqualified</span>
+            </div>
             <div className='flex justify-center items-center bg-white p-5'>
                 <p class='text-lg'>Made by Melih</p>
             </div>

@@ -67,7 +67,7 @@ function symbolWithLabel(label, fillColor) {
     ctx.fill();
 
     ctx.font = "bold 10px Tahoma";
-    ctx.fillStyle = "black";
+    ctx.fillStyle = "white";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(label, width / 2, height / 2);

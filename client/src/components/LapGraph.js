@@ -316,7 +316,12 @@ function LapGraph({ year, circuitID, session, selectedDrivers, drivercodes, driv
             let currentlap = [];
             selectedDrivers.map((driver, index) => {
                 if (lapTimes[driver] !== undefined && lapTimes[driver].length > i){
-                    currentlap.push(lapTimes[driver][i]);
+                    if (excludePitStops && filteredLapTimes[driver] !== undefined && filteredLapTimes[driver].length > 0) {
+                        currentlap.push(filteredLapTimes[driver][i]);
+                    } else {
+                        currentlap.push(lapTimes[driver][i]);
+
+                    }
 
                 }
             });
@@ -360,10 +365,10 @@ function LapGraph({ year, circuitID, session, selectedDrivers, drivercodes, driv
             let pitstops = {};
 
             for (let i = 0; i < lapTimes[driver].length; i++) {
-                pitstops[i+1] = 0;
+                pitstops[i] = 0;
                 pitstopData.forEach(element => {
                     if (parseInt(element.lap) === i+1 && element.driverId === driver) {
-                        pitstops[i+1] = parseFloat(element.duration);
+                        pitstops[i] = parseFloat(element.duration);
                         console.log("pitstop found: " + parseFloat(element.duration));
                     }
                 });
@@ -379,11 +384,7 @@ function LapGraph({ year, circuitID, session, selectedDrivers, drivercodes, driv
                     if (pitstops[index] === 0 || pitstops[index] === undefined) {
                         filteredDriverLaps.push(laptime);
                     } else
-                    if(excludePitStops){
-                        filteredDriverLaps.push(laptime - pitstops[index]);
-                    } else {
-                        filteredDriverLaps.push(laptime + pitstops[index]);
-                    }
+                    filteredDriverLaps.push(laptime - pitstops[index]);
                 });
             }
             filteredLapTimes[driver] = filteredDriverLaps;
