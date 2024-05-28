@@ -5,6 +5,7 @@ import Qualifying from './components/Qualifying';
 import Season from "./components/Season";
 import Racegraph from './components/racegraph';
 import Standings from "./components/Standings";
+import About from './components/About';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <li className="nav-item"><Link to="/racegraph">Racegraph</Link></li>
             <li className="nav-item"><Link to="/race_statistics">Race statistics</Link></li>
             <li className="nav-item"><Link to="/qualifying_statistics">Qualifying statistics</Link></li>
+            <li className="nav-item"><Link to="/about">About</Link></li>
           </ul>
         </nav>
 
@@ -28,6 +30,7 @@ function App() {
           <Route path="/racegraph" element={<Racegraph />} />
           <Route path="/race_statistics" element={<DriverCompare />} />
           <Route path="/qualifying_statistics" element={ <Qualifying /> } />
+          <Route path="/about" element={<About />} />
         </Routes>
         </div>
       </div>
